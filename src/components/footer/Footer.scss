@@ -1,0 +1,51 @@
+@import '../../Variables.scss';
+
+.main-footer {
+    height: 400px;
+    margin-top: 150px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    &:before {
+        content: '';
+        display: block;
+        height: 200%;
+        width: 2500px;
+        bottom: -110%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        background-color: $bg-light;
+        box-shadow: 0 -4px 5px #0000003b;
+    }
+    .text {
+        position: absolute;
+        bottom: 30px;
+        top: 60%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        color: $text-dark;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        > div {
+            display: flex;
+            justify-content: space-between;
+            width: 400px;
+            @media (max-width: $sm) {
+                flex-direction: column;
+            }
+            > * {
+                height: 50px;
+                vertical-align: middle;
+                margin: 0 auto;
+            }
+        }
+    }
+    .copyright {
+        margin-top: 30px;
+    }
+}
+

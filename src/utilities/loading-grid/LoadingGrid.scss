@@ -1,0 +1,31 @@
+@import '../../Variables.scss';
+
+.loading-grid {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    .grid {
+        display: inline-block;
+        max-width: 345px;
+        width: 100%;
+        height: 420px;
+        background-color: $bg-light;
+        display: inline-block;
+        border-radius: 20px;
+        box-shadow: 0 6px 8px #0000004d;
+        display: inline-block;
+        vertical-align: top;
+        margin-bottom: 50px;
+        &:not(:nth-child(3n+3)) {
+            margin-right: 50px;
+        }
+        animation-duration: 2.2s;
+        animation-fill-mode: forwards;
+        animation-iteration-count: infinite;
+        animation-name: shimmer;
+        animation-timing-function: linear;
+        background: #E5F0FB;
+        background: linear-gradient(to right, transparent 4%, $bg-dark 25%, transparent 36%);
+        background-size: 1200px 100%;
+    }
+}

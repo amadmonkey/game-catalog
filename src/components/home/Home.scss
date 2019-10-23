@@ -1,0 +1,139 @@
+@import '../../Variables.scss';
+
+
+.other-articles-container {
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $md-other-articles) {
+        display: block;
+        .other-articles {
+            margin-right: 0;
+            max-width: unset;
+        }
+        .upcoming-games {
+            float: unset;
+            max-width: unset;
+            margin-top: 20px;
+        }
+    }
+}
+
+
+.other-articles {
+    max-width: 800px;
+    width: 100%;
+    display: inline-block;
+    color: $text-lighter;
+    margin-right: 30px;
+    .other-articles-item {
+        position: relative;
+        line-height: 1.5;
+        color: $text-light;
+        padding: 15px 0;
+        .image {
+            display: inline-block;
+            max-width: 200px;
+            width: 100%;
+            @media (max-width: $lg-other-articles) {
+                max-width: unset;
+                margin-bottom: 10px;
+            }
+            img {
+                width: 100%;
+                border-radius: 10px;
+                @include shadow(0 3px 6px #00000054);
+            }
+        }
+        .text {
+            display: inline-block;
+            box-sizing: border-box;
+            padding-left: 20px;
+            max-width: 600px;
+            vertical-align: top;
+            .title {
+                color: $text-lighter;
+                font-size: 16px;
+                max-width: 650px;
+            }
+            .summary {
+                font-size: 13px;
+                max-width: 650px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                line-height: 1.5;
+                max-height: 50px;
+                margin-top: 5px;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            .date {
+                display: table;
+                margin-top: 10px;
+                font-size: 13px;
+                > * {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                .time {
+                    height: 20px;
+                    margin-right: 10px;
+                    fill: $text-light;
+                }
+            }
+        }
+        border-bottom: 1px solid $text-light;
+    }
+    button {
+        margin-top: 20px;
+    }
+}
+
+.upcoming-games {
+    float: right;
+    display: block;
+    max-width: 310px;
+    width: 100%;
+    border: 3px solid $bg-light;
+    border-radius: 20px;
+    box-sizing: border-box;
+    header {
+        color: $primary;
+        height: 56px;
+        padding: 20px;
+        box-sizing: border-box;
+        text-align: center;
+        h1 {
+            border-bottom: 3px solid #2f2f2f;
+            padding-bottom: 15px;
+        }
+    }
+    .upcoming-games-content {
+        padding: 20px;
+        color: $text-lighter;
+        > div {
+            margin-bottom: 10px;
+            line-height: 1.5;
+            >  h1 {
+                font-family: 'Montserrat-SemiBold', sans-serif;
+                color: $primary;
+                min-width: 23px;
+                padding-right: 15px;
+                text-align: center;
+                border-right: 2px solid $primary;
+                margin-right: 10px;
+            }
+            img {
+                width: 50%;
+            }
+            .title {
+                font-size: 15px;
+            }
+            .date {
+                color: $text-light;
+                font-size: 12px;
+            }
+        }
+
+    }
+}

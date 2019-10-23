@@ -1,0 +1,162 @@
+@import './Variables.scss';
+
+html,
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: $bg;
+    letter-spacing: 3px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+.app {
+    position: relative;
+}
+
+// https://codepen.io/GhostRider/pen/GHaFw
+
+::-webkit-scrollbar-track{
+    background-color: $bg;
+}
+ 
+::-webkit-scrollbar {
+    width: 12px;
+    background-color: $bg;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+    box-shadow: inset 0 0 3px rgba(0,0,0,.3);
+    background-color: #08263e;
+}
+
+button {
+    height: 50px;
+    min-width: 200px;
+    width: 100%;
+    border-radius: 25px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    color: $text-dark;
+    background-color: transparent;
+    font-family: 'Montserrat', sans-serif;
+    box-shadow: $shadow;
+    border: 2px solid $text-dark;
+    transition: 0.3s;
+    cursor: pointer;
+    &:hover {
+        border-color: $primary;
+        color: $primary;
+    }
+}
+
+.content {
+    max-width: 1140px;
+    padding: 0 20px;
+    margin: 0 auto;
+    z-index: 1;
+    position: relative;
+}
+
+// remove blue outline
+*:focus {
+    outline: none;
+}
+
+.bg-item {
+    position: absolute;
+    fill: #011321;
+    &.bg-controller-1 {
+        height: 160px;
+        top: 0px;
+        left: 35%;
+        transform: rotate(20deg);
+    }
+    &.bg-triangle-1 {
+        height: 400px;
+        right: -118px;
+        top: 136px;
+        transform: rotate(4deg);
+    }
+    &.bg-square {
+        height: 600px;
+        left: -150px;
+        top: 300px;
+        transform: rotate(0deg);
+    }
+    &.bg-mouse {
+        height: 350px;
+        right: 23px;
+        top: 800px;
+        transform: rotate(35deg);
+    }
+    &.bg-keyboard {
+        height: 350px;
+        left: 500px;
+        top: 800px;
+        transform: rotate(-11deg);
+    }
+    &.bg-circle {
+        height: 1100px;
+        right: -600px;
+        bottom: 57px;
+    }
+    &.bg-controller-2 {
+        height: 450px;
+        left: -286px;
+        bottom: 100px;
+        transform: rotate(8deg);
+    }
+    &.bg-dpad {
+        height: 350px;
+        left: 50px;
+        bottom: 892px;
+        transform: rotate(8deg);
+    }
+    &.bg-triangle-2 {
+        height: 450px;
+        left: 600px;
+        bottom: 500px;
+        transform: rotate(-20deg);
+    }
+}
+
+.shimmer {
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background: #E5F0FB;
+    background: linear-gradient(to right, transparent 4%, $bg-dark 25%, transparent 36%);
+    background-size: 1200px 100%;
+}
+
+.title {
+    @include transition(0.3s);
+    &:hover {
+        color: $primary !important;
+        text-decoration: underline;
+        cursor: pointer !important;
+    }
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-family: 'Montserrat-SemiBold', sans-serif;
+    label {
+        margin-bottom: 5px;
+        color: #888888;
+    }
+    span {
+        line-height: 1.5;
+    }
+ }

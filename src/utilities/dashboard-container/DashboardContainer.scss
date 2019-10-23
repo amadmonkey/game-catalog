@@ -1,0 +1,11 @@
+@import '../../Variables.scss';
+
+.dashboard-container {
+    margin-bottom: 50px;
+    min-height: 500px;
+    > .title {
+        font-size: 25px;
+        color: #ccc;
+        margin: 15px 0;
+    }
+}

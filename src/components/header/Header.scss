@@ -1,0 +1,213 @@
+@import '../../Variables.scss';
+
+.main-header {
+    position: relative;
+    padding: 40px 70px;
+    box-sizing: border-box;
+    display: block;
+    height: 140px;
+    line-height: 3;
+    font-family: 'Montserrat-Medium', sans-serif;
+    z-index: 2;
+    .mobile-menu {
+        display: none;
+        @media (max-width: $md) {
+            display: inline-block;
+        }
+    }
+    .logo {
+        max-width: 350px;
+        width: 100%;
+        display: inline-block;
+        svg {
+            vertical-align: middle;
+        }
+    }
+    nav {
+        position: relative;
+        float: right;
+        font-size: 16px;
+        line-height: 5;
+        z-index: 1;
+        @media (max-width: $md) {
+            background-color: black;
+        }
+        ul {
+            margin: 0;
+            list-style-type: none;
+            li {
+                position: relative;
+                display: inline-block;
+                width: auto;
+                height: 100%;
+                text-align: center;
+                margin-left: 10px;
+                color: $text-dark;
+                transition: 0.3s;
+                line-height: 2.2;
+                width: 150px;
+                padding: 5px 5px;
+                cursor: pointer;
+                border-top-left-radius: 17px;
+                border-top-right-radius: 17px;
+                &:hover {
+                    // background-color: $bg-light;
+                    .dropdown {
+                        top: 40px;
+                        opacity: 1;
+                        pointer-events: unset;
+                    }
+                    > a {
+                        z-index: 1;
+                        position: relative;
+                        color: $primary;
+                    }
+                }
+                .dropdown {
+                    &:before {
+                        content: '';
+                        position: absolute;
+                        height: 60px;
+                        top: -40px;
+                        width: 150px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        border-top-left-radius: 20px;
+                        border-top-right-radius: 20px;
+                        background-color: #001d35;
+                    }
+                    top: 60px;
+                    opacity: 0;
+                    pointer-events: none;
+                    text-align: left;
+                    background-color: #001d35;
+                    position: absolute;
+                    width: 300px;
+                    left: -45%;
+                    padding: 20px;
+                    box-sizing: border-box;
+                    border-radius: 20px;
+                    box-shadow: 0 3px 6px #00000070;
+                    @include transition(0.5s);
+                    ul {
+                        text-align: center;
+                        li {
+                            width: 100%;
+                            @include transition(0.5s);
+                            margin-left: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .search {
+        position: relative;
+        height: 100%;
+        float: right;
+        line-height: 5;
+        > div {
+            position: relative;
+            display: inline;
+            &::before {
+                content: url(../../img/search.svg);
+                position: absolute;
+                top: 70%;
+                left: 25px;
+                transform: translateY(-50%);
+            }
+        }
+        input {
+            font-size: 16px;
+            height: 40px;
+            width: 85px;
+            padding: 1px 25px 1px 55px;
+            background-color: transparent;
+            border: 2px solid $text-dark;
+            border-radius: 25px;
+            font-family: 'Montserrat-Medium', sans-serif;
+            color: $text-light;
+            @include transition(0.3s);
+            &:hover,
+            &:focus {
+                width: 300px;
+                border-radius: 30px;
+                border-color: $primary;
+                color: $primary;
+            }
+            &::placeholder {
+                letter-spacing: 3px;
+            }
+        }
+    }
+    @media (max-width: $xl) {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        text-align: center;
+        padding: 20px;
+        .logo {
+            margin: 0 auto;
+        }
+    }
+    @media (max-width: $md) {
+        display: block;
+        .search {
+            display: block;
+            float: unset;
+        }
+        .logo {
+            margin-left: 0;
+        }
+        > nav {
+            display: none;
+        }
+        .mobile-menu {
+            position: relative;
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            border: 2px solid #484c50;
+            margin-left: 30px;
+            vertical-align: text-top;
+            transform: rotate(90deg);
+            @media (max-width: $sm) {
+                margin-left: 0;
+                margin: 0 auto;
+            }
+            .menu-bars {
+                width: 2px;
+                background-color: #484c50;
+                height: 25px;
+                display: block;
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);
+                position: absolute;
+                &:before,
+                &:after {
+                    content: '';
+                    width: 2px;
+                    background-color: #484c50;
+                    height: 25px;
+                    display: block;
+                    top: 50%;
+                    left: 50%;
+                    transform: translateX(-50%) translateY(-50%);
+                    position: absolute;
+                }
+                &:before {
+                    margin-left: 9px;
+                }
+                &:after {
+                    margin-left: -9px;
+                }
+            }
+        }
+    }
+    @media (max-width: $sm) {
+        .search {
+            display: none;
+        }
+    }
+}
