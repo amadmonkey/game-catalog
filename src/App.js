@@ -23,7 +23,7 @@ const App = () => {
 				<Header />
 				<div className="content">
 					{Object.keys(_ROUTES).map((key, i) => {
-						return <Route key={i} path={process.env.PUBLIC_URL + _ROUTES[key].path} component={_ROUTES[key].component} exact />
+						return <Route key={i} path={_ROUTES[key].path} component={_ROUTES[key].component} exact />
 					})}
 				</div>
 				<Footer />
