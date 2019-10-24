@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const base = 'https://shrouded-atoll-96049';
+const base = 'https://portfolio-game-catalog.herokuapp.com';
 
 const getArticles = (params) => {
     return axios.get(base + '/articles', {
