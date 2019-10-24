@@ -15,14 +15,15 @@ import { ReactComponent as Keyboard } from './img/bg-keyboard.svg';
 import { ReactComponent as Circle } from './img/bg-circle.svg';
 import { ReactComponent as Dpad } from './img/bg-dpad.svg';
 
+
 const App = () => {
 	return (
 		<div className="app">
-			<BrowserRouter>
+			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<Header />
 				<div className="content">
 					{Object.keys(_ROUTES).map((key, i) => {
-						return <Route key={i} path={_ROUTES[key].path} component={_ROUTES[key].component} exact />
+						return <Route key={i} path={process.env.PUBLIC_URL + _ROUTES[key].path} component={_ROUTES[key].component} exact />
 					})}
 				</div>
 				<Footer />
