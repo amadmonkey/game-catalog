@@ -18,19 +18,19 @@ const GameWidget = (props) => {
                 replacement
             </header> */}
             <div className="details">
-                <div class="form-group">
+                <div className="form-group">
                     <label>Release Date</label>
                     <span>{data.released}</span>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label>Genre</label>
                     <span>{data.genres.map(obj => obj.name).join(', ')}</span>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label>Metacritic</label>
                     <span>{data.metacritic}</span>
                 </div>
-                <div class="form-group">
+                <div className="form-group">
                     <label>Rating</label>
                     <span>{data.rating}</span>
                 </div>

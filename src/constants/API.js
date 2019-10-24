@@ -1,7 +1,9 @@
 import axios from 'axios';
 
+const base = 'https://shrouded-atoll-96049';
+
 const getArticles = (params) => {
-    return axios.get('http://localhost:3001/articles', {
+    return axios.get(base + '/articles', {
         params: params
     }).then(res => {
         return res;
@@ -11,7 +13,7 @@ const getArticles = (params) => {
 }
 
 const getGames = (params) => {
-    return axios.get('http://localhost:3001/games', {
+    return axios.get(base + '/games', {
         params: params
     }).then(res => {
         return res;
@@ -22,7 +24,7 @@ const getGames = (params) => {
 
 
 const getReviews = (params) => {
-    return axios.get('http://localhost:3001/reviews', {
+    return axios.get(base + '/reviews', {
         params: params
     }).then(res => {
         return res;
