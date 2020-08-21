@@ -8,10 +8,8 @@ const RatingMeter = (props) => {
 
     function progress(value) {
         const progress = value / 100;
-        const dashoffset = CIRCUMFERENCE * (1 - progress);
-
-        // console.log('progress:', value + '%', '|', 'offset:', dashoffset)
-
+        const dashoffset = CIRCUMFERENCE * (1.05 - progress);
+        console.log(dashoffset);
         let progressValue = document.querySelector('#' + id + ' svg .progress__value');
         progressValue.style.strokeDashoffset = dashoffset;
     }
@@ -27,7 +25,7 @@ const RatingMeter = (props) => {
         let progressText = document.querySelector('#' + id + ' h1');
         if (window.pageYOffset >= top) {
             progressValue.style.strokeDasharray = CIRCUMFERENCE;
-            let progressValueNumber = (props.rate / 10) * 100;
+            let progressValueNumber = ((props.rate) / 10) * 100;
             let color;
             if (progressValueNumber >= 1 && progressValueNumber <= 59) {
                 color = '#ff2c2c';

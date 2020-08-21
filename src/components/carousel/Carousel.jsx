@@ -1,16 +1,17 @@
-import React, { useState, useEffect } from 'react';
-import { ReactComponent as Time, ReactComponent } from '../../img/time.svg';
-import TimeAgo from 'react-timeago';
+import React, { useEffect } from 'react';
+import { ReactComponent as Time } from '../../img/time.svg';
 import Moment from 'react-moment';
+import 'moment-timezone';
 import './Carousel.scss';
 
+Moment.globalTimezone = 'America/Los_Angeles';
+
 const Carousel = (props) => {
+
 
     const pauseLength = 10;
     let activeIndex = 1;
     let timeoutId = null;
-
-    const [articles, setArticles] = useState(null);
 
     const setTimer = () => {
         clearTimeout(timeoutId);
@@ -38,7 +39,7 @@ const Carousel = (props) => {
                     <p className="summary">{obj.deck}</p>
                     <div className="date">
                         <Time className="time" />
-                        <Moment fromNow>{obj.publish_date}</Moment>
+                        <Moment tz="America/Los_Angeles" fromNow>{obj.publish_date}</Moment>
                     </div>
                 </div>
             </article>

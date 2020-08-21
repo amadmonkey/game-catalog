@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import TimeAgo from 'react-timeago';
+import Moment from 'react-moment';
+import 'moment-timezone';
 import Carousel from '../carousel/Carousel';
 import { DashboardContainer, GameWidget, ReviewWidget } from '../../utilities';
 import { ReactComponent as Time } from '../../img/time.svg';
@@ -11,11 +12,14 @@ import API from '../../constants/API.js';
 
 import './Home.scss';
 
+Moment.globalTimezone = 'America/Los_Angeles';
+
 const Home = () => {
     const [articles, setArticles] = useState(null);
     const [games, setGames] = useState(null);
     const [upcomingGames, setUpcomingGames] = useState(null);
     const [reviews, setReviews] = useState(null);
+
 
     useEffect(() => {
 
@@ -25,8 +29,6 @@ const Home = () => {
         }).then(res => {
             setArticles(res.isAxiosError ? BACKUP.ARTICLES : res.data.results);
         })
-
-        // https://rawg.io/api/games/lists/main?discover=true&ordering=-relevance&parent_platforms=1&page_size=40&page=1
 
         API.GET.GAMES({
             // dates: '2018-10-22,2019-10-22',
@@ -74,7 +76,7 @@ const Home = () => {
                                     <p className="summary">{obj.deck}</p>
                                     <div className="date">
                                         <Time className="time" />
-                                        <TimeAgo date={obj.publish_date} />
+                                        <Moment tz="America/Los_Angeles" fromNow>{obj.publish_date}</Moment>
                                     </div>
                                 </div>
                             </article>
@@ -148,7 +150,7 @@ const Home = () => {
             <DashboardContainer title="Recent Reviews">
                 {reviews ? RecentReviews({ title: 'Recent Reviews' }) : <LoadingGrid />}
             </DashboardContainer>
-            <DashboardContainer title="New Games">
+            <DashboardContainer title="New and trending">
                 {games ? NewGames({ title: 'New Games' }) : <LoadingGrid />}
             </DashboardContainer>
         </section >
