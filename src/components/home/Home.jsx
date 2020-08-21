@@ -26,15 +26,23 @@ const Home = () => {
             setArticles(res.isAxiosError ? BACKUP.ARTICLES : res.data.results);
         })
 
+        // https://rawg.io/api/games/lists/main?discover=true&ordering=-relevance&parent_platforms=1&page_size=40&page=1
+
         API.GET.GAMES({
-            dates: '2018-10-22,2019-10-22',
+            // dates: '2018-10-22,2019-10-22',
+            discover: true,
+            ordering: "-relevance",
+            page: 1,
             page_size: 9
         }).then(res => {
             setGames(res.isAxiosError ? BACKUP.GAMES.slice(0, 9) : res.data.results);
         })
 
         API.GET.GAMES({
-            dates: '2019-09-22,2020-10-22',
+            // dates: '2019-09-22,2020-10-22',
+            discover: true,
+            ordering: "-relevance",
+            page: 1,
             page_size: 10
         }).then(res => {
             setUpcomingGames(res.isAxiosError ? BACKUP.GAMES : res.data.results);
