@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/game-catalog/static/css/main.2c13a032.chunk.css",
-    "main.js": "/game-catalog/static/js/main.75bcca4e.chunk.js",
-    "main.js.map": "/game-catalog/static/js/main.75bcca4e.chunk.js.map",
+    "main.js": "/game-catalog/static/js/main.3756a429.chunk.js",
+    "main.js.map": "/game-catalog/static/js/main.3756a429.chunk.js.map",
     "runtime-main.js": "/game-catalog/static/js/runtime-main.fc7bd752.js",
     "runtime-main.js.map": "/game-catalog/static/js/runtime-main.fc7bd752.js.map",
     "static/js/2.3b5d1f05.chunk.js": "/game-catalog/static/js/2.3b5d1f05.chunk.js",
     "static/js/2.3b5d1f05.chunk.js.map": "/game-catalog/static/js/2.3b5d1f05.chunk.js.map",
     "index.html": "/game-catalog/index.html",
-    "precache-manifest.1a8e4576e3df7ff600cd3871e6eabaac.js": "/game-catalog/precache-manifest.1a8e4576e3df7ff600cd3871e6eabaac.js",
+    "precache-manifest.b1ef8f26f8950167672660fed4f04156.js": "/game-catalog/precache-manifest.b1ef8f26f8950167672660fed4f04156.js",
     "service-worker.js": "/game-catalog/service-worker.js",
     "static/css/main.2c13a032.chunk.css.map": "/game-catalog/static/css/main.2c13a032.chunk.css.map",
     "static/media/Home.scss": "/game-catalog/static/media/Montserrat-SemiBold.c641dbee.ttf",
@@ -36,6 +36,6 @@
     "static/js/runtime-main.fc7bd752.js",
     "static/js/2.3b5d1f05.chunk.js",
     "static/css/main.2c13a032.chunk.css",
-    "static/js/main.75bcca4e.chunk.js"
+    "static/js/main.3756a429.chunk.js"
   ]
 }
