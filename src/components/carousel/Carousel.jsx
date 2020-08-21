@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ReactComponent as Time, ReactComponent } from '../../img/time.svg';
 import TimeAgo from 'react-timeago';
+import Moment from 'react-moment';
 import './Carousel.scss';
 
 const Carousel = (props) => {
@@ -37,7 +38,7 @@ const Carousel = (props) => {
                     <p className="summary">{obj.deck}</p>
                     <div className="date">
                         <Time className="time" />
-                        <TimeAgo date={obj.publish_date} />
+                        <Moment fromNow>{obj.publish_date}</Moment>
                     </div>
                 </div>
             </article>
