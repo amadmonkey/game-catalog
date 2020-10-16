@@ -8,11 +8,25 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
+    overflow-y: auto;
     overflow-x: hidden;
+    pre {
+        white-space: pre-wrap;       /* css-3 */
+        white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+        white-space: -pre-wrap;      /* Opera 4-6 */
+        white-space: -o-pre-wrap;    /* Opera 7 */
+        word-wrap: break-word;       /* Internet Explorer 5.5+ */
+        line-height: 1.5;
+    }
 }
 
 .app {
     position: relative;
+    @media (height: 1000px) {
+        .bg-item {
+            display: none;
+        }
+    }
 }
 
 // https://codepen.io/GhostRider/pen/GHaFw
@@ -56,10 +70,21 @@ button {
 
 .content {
     max-width: 1140px;
+    min-height: 500px;
     padding: 0 20px;
     margin: 0 auto;
-    z-index: 1;
+    padding-top: 150px;
+    z-index: 2;
     position: relative;
+    @media (max-width: $xl) {
+        padding-top: 200px;
+    }
+    @media (max-width: $md) {
+        padding-top: 200px;
+    }
+    @media (max-width: $sm) {
+        padding-top: 250px;
+    }
 }
 
 // remove blue outline
@@ -100,6 +125,7 @@ button {
         top: 800px;
         transform: rotate(-11deg);
     }
+    // bottom
     &.bg-circle {
         height: 1100px;
         right: -600px;
@@ -154,9 +180,43 @@ button {
     font-family: 'Montserrat-SemiBold', sans-serif;
     label {
         margin-bottom: 5px;
-        color: #888888;
+        color: $text-light;
     }
     span {
         line-height: 1.5;
     }
  }
+
+ blockquote.twitter-tweet {
+    display: inline-block;
+    font-family: "Helvetica Neue", Roboto, "Segoe UI", Calibri, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    border-color: #eee #ddd #bbb;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+    margin: 10px 5px;
+    padding: 0 16px 16px 16px;
+    max-width: 468px;
+  }
+  
+  blockquote.twitter-tweet p {
+    font-size: 16px;
+    font-weight: normal;
+    line-height: 20px;
+  }
+  
+  blockquote.twitter-tweet a {
+    color: inherit;
+    font-weight: normal;
+    text-decoration: none;
+    outline: 0 none;
+  }
+  
+  blockquote.twitter-tweet a:hover,
+  blockquote.twitter-tweet a:focus {
+    text-decoration: underline;
+  }

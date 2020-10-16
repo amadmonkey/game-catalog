@@ -1,98 +1,55 @@
+// app
 import React, { useState, useEffect } from 'react';
 import Moment from 'react-moment';
+import moment from 'moment';
 import 'moment-timezone';
-import Carousel from '../carousel/Carousel';
-import { DashboardContainer, GameWidget, ReviewWidget } from '../../utilities';
-import { ReactComponent as Time } from '../../img/time.svg';
-import LoadingGrid from '../../utilities/loading-grid/LoadingGrid';
-import LoadingRows from '../../utilities/loading-row/LoadingRow';
 
+// components
+import Carousel from '../carousel/Carousel';
+import { DashboardContainer, ReviewWidget } from '../../utilities';
+import LoadingRows from '../../utilities/loading-row/LoadingRow';
+import Articles from '../../components/articles/Articles';
+import Reviews from '../../components/reviews/Reviews';
+import Games from '../../components/games/Games';
+
+// data
 import BACKUP from '../../constants/Backup.js';
 import API from '../../constants/API.js';
 
+// styles
 import './Home.scss';
+import '../articles/Articles.scss';
 
 Moment.globalTimezone = 'America/Los_Angeles';
 
 const Home = () => {
     const [articles, setArticles] = useState(null);
-    const [games, setGames] = useState(null);
     const [upcomingGames, setUpcomingGames] = useState(null);
     const [reviews, setReviews] = useState(null);
 
+    const getArticles = (articles) => {
+        setArticles(articles);
+    }
 
     useEffect(() => {
-
-        API.GET.ARTICLES({
-            sort: 'publish_date:desc',
-            limit: 10
-        }).then(res => {
-            setArticles(res.isAxiosError ? BACKUP.ARTICLES : res.data.results);
-        })
-
+        let format = "YYYY-MM-DD";
         API.GET.GAMES({
-            // dates: '2018-10-22,2019-10-22',
             discover: true,
-            ordering: "-relevance",
             page: 1,
-            page_size: 9
-        }).then(res => {
-            setGames(res.isAxiosError ? BACKUP.GAMES.slice(0, 9) : res.data.results);
-        })
-
-        API.GET.GAMES({
-            // dates: '2019-09-22,2020-10-22',
-            discover: true,
-            ordering: "-relevance",
-            page: 1,
-            page_size: 10
+            page_size: 10,
+            ordering: "-rating",
+            dates: moment().subtract(1, "months").format(format) + "," + moment().format(format)
         }).then(res => {
             setUpcomingGames(res.isAxiosError ? BACKUP.GAMES : res.data.results);
         })
 
-        API.GET.REVIEWS({
-            sort: 'publish_date:desc',
-            limit: 3
-        }).then(res => {
-            setReviews(res.isAxiosError ? BACKUP.REVIEWS : res.data.results);
-        })
-
     }, []);
-
-
-
-    const OtherArticles = () => {
-        return (
-            <div className="other-articles">
-                {
-                    articles.slice(5, 10).map((obj, i) => {
-                        return (
-                            <article key={i} className="other-articles-item">
-                                <div className="image">
-                                    <img src={obj.image.original} alt="" />
-                                </div>
-                                <div className="text">
-                                    <h1 className="title">{obj.title}</h1>
-                                    <p className="summary">{obj.deck}</p>
-                                    <div className="date">
-                                        <Time className="time" />
-                                        <Moment tz="America/Los_Angeles" fromNow>{obj.publish_date}</Moment>
-                                    </div>
-                                </div>
-                            </article>
-                        )
-                    })
-                }
-                <button>View More</button>
-            </div>
-        )
-    }
 
     const TopUpcomingGames = () => {
         return (
             <div className="upcoming-games">
                 <header>
-                    <h1>Top Upcoming Games</h1>
+                    <h1>Top rated for the past month</h1>
                 </header>
                 <div className="upcoming-games-content">
                     {/* {upcomingGames ? TopUpcomingGames() : <LoadingRows />} */}
@@ -101,12 +58,10 @@ const Home = () => {
                             <div key={i} style={{ display: 'flex' }}>
                                 <h1>{i + 1}</h1>
                                 <div style={{ display: 'flex', flexDirection: 'column' }}>
-                                    {/* <img src={obj.background_image} alt="" /> */}
                                     <div>
                                         <h1 className="title">{obj.name}</h1>
                                         <span className="date">{obj.released}</span>
                                     </div>
-
                                 </div>
                             </div>
                         )
@@ -116,42 +71,20 @@ const Home = () => {
         )
     }
 
-    const RecentReviews = ({ title }) => {
-        return (
-            <div style={{ textAlign: 'center' }}>
-                {reviews.map((obj, i) => {
-                    return <ReviewWidget key={i} data={obj} container={title} />;
-                })}
-                <button>View More</button>
-            </div>
-        )
-    }
-
-    const NewGames = ({ title }) => {
-        return (
-            <div style={{ textAlign: 'center' }}>
-                {games.map((obj, i) => {
-                    return <GameWidget key={i} data={obj} container={title} />;
-                })}
-                <button>View More</button>
-            </div>
-        )
-    }
-
     return (
         <section>
-            <DashboardContainer>
+            <DashboardContainer title={{ name: "Latest Articles", link: "/articles" }}>
                 <Carousel articles={articles} />
-                <div className="other-articles-container">
-                    {articles ? OtherArticles() : <LoadingRows />}
+                <div className="articles-container">
+                    <Articles isDashboard={true} setArticles={getArticles} />
                     {upcomingGames ? TopUpcomingGames() : <LoadingRows />}
                 </div>
             </DashboardContainer>
-            <DashboardContainer title="Recent Reviews">
-                {reviews ? RecentReviews({ title: 'Recent Reviews' }) : <LoadingGrid />}
+            <DashboardContainer title={{ name: "Recent Reviews", link: "/reviews" }}>
+                <Reviews isDashboard={true} />
             </DashboardContainer>
-            <DashboardContainer title="New and trending">
-                {games ? NewGames({ title: 'New Games' }) : <LoadingGrid />}
+            <DashboardContainer title={{ name: "New and trending", link: "/games" }}>
+                <Games isDashboard={true} />
             </DashboardContainer>
         </section >
     )

@@ -1,12 +1,12 @@
 @import '../../Variables.scss';
 
 
-.other-articles-container {
+.articles-container {
     display: flex;
     justify-content: space-between;
-    @media (max-width: $md-other-articles) {
+    @media (max-width: $md-articles) {
         display: block;
-        .other-articles {
+        .articles {
             margin-right: 0;
             max-width: unset;
         }
@@ -15,77 +15,6 @@
             max-width: unset;
             margin-top: 20px;
         }
-    }
-}
-
-
-.other-articles {
-    max-width: 800px;
-    width: 100%;
-    display: inline-block;
-    color: $text-lighter;
-    margin-right: 30px;
-    .other-articles-item {
-        position: relative;
-        line-height: 1.5;
-        color: $text-light;
-        padding: 15px 0;
-        .image {
-            display: inline-block;
-            max-width: 200px;
-            width: 100%;
-            @media (max-width: $lg-other-articles) {
-                max-width: unset;
-                margin-bottom: 10px;
-            }
-            img {
-                width: 100%;
-                border-radius: 10px;
-                @include shadow(0 3px 6px #00000054);
-            }
-        }
-        .text {
-            display: inline-block;
-            box-sizing: border-box;
-            padding-left: 20px;
-            max-width: 600px;
-            vertical-align: top;
-            .title {
-                color: $text-lighter;
-                font-size: 16px;
-                max-width: 650px;
-            }
-            .summary {
-                font-size: 13px;
-                max-width: 650px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                display: -webkit-box;
-                line-height: 1.5;
-                max-height: 50px;
-                margin-top: 5px;
-                -webkit-line-clamp: 2;
-                -webkit-box-orient: vertical;
-            }
-            .date {
-                display: table;
-                margin-top: 10px;
-                font-size: 13px;
-                > * {
-                    display: table-cell;
-                    vertical-align: middle;
-                }
-                .time {
-                    height: 20px;
-                    margin-right: 10px;
-                    fill: $text-light;
-                }
-            }
-        }
-        border-bottom: 1px solid $text-light;
-    }
-    button {
-        margin-top: 20px;
     }
 }
 

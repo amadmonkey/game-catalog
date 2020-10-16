@@ -1,22 +1,26 @@
+// app
 import React from 'react';
+import { Link, useHistory } from "react-router-dom";
+
+// data
 import ICON from '../../constants/Constants.js';
 
+// styles
 import '../game-widget/GameWidget.scss';
 
 const GameWidget = (props) => {
+
     const data = props.data;
+    const history = useHistory();
     return (
         <div className="game-widget">
             <header id="GAME-WIDGET-STATIC" className="image">
-                <img src={data.background_image} alt="Error" />
+                <img loading="lazy" src={data.background_image} alt="Error" />
                 <div className="text">
-                    <h1 className="title">{data.name}</h1>
-                    <ul>{ICON.GET_STORES(data.platforms)}</ul>
+                    <Link to={`/games/${data.name}/${data.id}`}><h1 className="title">{data.name}</h1></Link>
+                    <ul>{ICON.GET_PLATFORMS(data.parent_platforms)}</ul>
                 </div>
             </header>
-            {/* <header id="GAME-WIDGET-MOVING" className="image">
-                replacement
-            </header> */}
             <div className="details">
                 <div className="form-group">
                     <label>Release Date</label>
@@ -36,10 +40,11 @@ const GameWidget = (props) => {
                 </div>
             </div>
             <footer>
-                <button>View More</button>
+                <button onClick={(e) => { history.push(`/games/${data.name}/${data.id}`) }}>View More</button>
             </footer>
         </div>
     )
+
 }
 
 export default GameWidget

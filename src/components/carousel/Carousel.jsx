@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import { ReactComponent as Time } from '../../img/time.svg';
 import Moment from 'react-moment';
 import 'moment-timezone';
@@ -9,7 +10,7 @@ Moment.globalTimezone = 'America/Los_Angeles';
 const Carousel = (props) => {
 
 
-    const pauseLength = 10;
+    const pauseLength = 10; // in seconds
     let activeIndex = 1;
     let timeoutId = null;
 
@@ -26,16 +27,21 @@ const Carousel = (props) => {
             element.classList.remove('active');
         });
         carouselItemDoms[activeIndex].classList.add('active');
-        activeIndex = activeIndex === 4 ? 0 : (activeIndex + 1);
+        activeIndex = activeIndex === (carouselItemDoms.length - 1) ? 0 : (activeIndex + 1);
         setTimer();
     }
 
     const CarouselItem = (obj, i) => {
         return (
             <article key={i} className={"carousel-item " + (i === 0 ? 'active' : '')}>
-                <img src={obj.image.original} alt="" />
+                <img loading="lazy" src={obj.image.original} alt="" />
                 <div className="description">
-                    <h1 className="title">{obj.title}</h1>
+                    {/* <Link to={`/articles/${obj.title.toLowerCase().replaceAll(/ /g, '-')}/${obj.id}`}><h1 className="title">{obj.title}</h1></Link> */}
+                    {/* <a target="_blank" rel="noopener noreferrer" href={obj.site_detail_url}><h1 className="title">{obj.title}</h1></a> */}
+                    <Link to={{
+                        pathname: `/articles/${obj.title.toLowerCase().replaceAll(/ /g, '-')}`,
+                        state: { article: obj }
+                    }}><h1 className="title">{obj.title}</h1></Link>
                     <p className="summary">{obj.deck}</p>
                     <div className="date">
                         <Time className="time" />
@@ -52,33 +58,35 @@ const Carousel = (props) => {
     }
 
     useEffect(() => {
-        document.querySelector('.carousel-container').addEventListener('mouseenter', () => {
+        let container = document.querySelector('.carousel-container');
+        setTimer();
+        container.addEventListener('mouseenter', clearTimeout(timeoutId));
+        container.addEventListener('mouseleave', setTimer);
+        return function cleanup() {
+            container.removeEventListener('mouseenter', clearTimeout(timeoutId));
+            container.removeEventListener('mouseleave', setTimer);
             clearTimeout(timeoutId);
-        });
-        document.querySelector('.carousel-container').addEventListener('mouseleave', () => {
-            setTimer();
-        });
-        if (props.articles) {
-            setTimer();
         }
     })
 
 
     return (
-        <div className="carousel-container">
-            {props.articles &&
-                <React.Fragment>
-                    {props.articles.slice(0, 5).map((value, i) => {
-                        return CarouselItem(value, i)
-                    })}
-                    <footer className="indicator">
-                        <li className="active"></li>
-                        {props.articles.slice(0, 5).map((value, i) => {
-                            return <li key={i} onClick={(e) => HandleClick(i)}></li>
+        <div>
+            <div className="carousel-container">
+                {props.articles &&
+                    <React.Fragment>
+                        {props.articles.map((value, i) => {
+                            return CarouselItem(value, i)
                         })}
-                    </footer>
-                </React.Fragment>
-            }
+                        <footer className="indicator">
+                            <li className="active"></li>
+                            {props.articles.map((value, i) => {
+                                return <li key={i} onClick={(e) => HandleClick(i)}></li>
+                            })}
+                        </footer>
+                    </React.Fragment>
+                }
+            </div>
         </div>
     )
 }

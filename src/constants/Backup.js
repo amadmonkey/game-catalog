@@ -2451,10 +2451,2085 @@ const games = [
     }
 ]
 
+const platforms = [
+    {},
+{},
+{},
+{},
+{},
+{},
+{},
+{
+"id": 22,
+"name": "Atari Flashback",
+"slug": "atari-flashback",
+"games_count": 29,
+"image_background": "https://media.rawg.io/media/screenshots/6ff/6ff0d1acf667e782d709d6fb96cddd0a.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 53138,
+"slug": "pong-1972",
+"name": "Pong (1972)",
+"added": 45
+},
+{
+"id": 52391,
+"slug": "adventure-game-atari",
+"name": "Adventure",
+"added": 32
+},
+{
+"id": 52402,
+"slug": "breakout-1976",
+"name": "Breakout (1976)",
+"added": 25
+},
+{
+"id": 52436,
+"slug": "missile-command-1980",
+"name": "Missile Command (1980)",
+"added": 23
+},
+{
+"id": 52563,
+"slug": "pitfall-1982",
+"name": "Pitfall! (1982)",
+"added": 26
+},
+{
+"id": 52576,
+"slug": "river-raid",
+"name": "River Raid",
+"added": 18
+}
+]
+},
+{
+"id": 46,
+"name": "Atari Lynx",
+"slug": "atari-lynx",
+"games_count": 55,
+"image_background": "https://media.rawg.io/media/screenshots/380/380240843aa44d54167bbef0d96ffe35.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 29391,
+"slug": "eye-of-the-beholder",
+"name": "Eye of the Beholder",
+"added": 640
+},
+{
+"id": 3802,
+"slug": "double-dragon",
+"name": "Double Dragon",
+"added": 276
+},
+{
+"id": 53467,
+"slug": "paperboy",
+"name": "Paperboy",
+"added": 130
+},
+{
+"id": 29371,
+"slug": "batman-returns",
+"name": "Batman Returns",
+"added": 50
+},
+{
+"id": 53975,
+"slug": "ninja-gaiden-iii-the-ancient-ship-of-doom",
+"name": "Ninja Gaiden III: The Ancient Ship of Doom (1991)",
+"added": 45
+},
+{
+"id": 52438,
+"slug": "ms-pac-man",
+"name": "Ms. Pac-Man",
+"added": 45
+}
+]
+},
+{
+"id": 34,
+"name": "Atari ST",
+"slug": "atari-st",
+"games_count": 812,
+"image_background": "https://media.rawg.io/media/screenshots/a7f/a7f3cb62af2ee95d92065da88583338b.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 54122,
+"slug": "ultima-iv-quest-of-the-avatar",
+"name": "Ultima IV: Quest of the Avatar",
+"added": 1145
+},
+{
+"id": 22733,
+"slug": "lure-of-the-temptress",
+"name": "Lure of the Temptress",
+"added": 921
+},
+{
+"id": 29908,
+"slug": "another-world",
+"name": "Another World",
+"added": 623
+},
+{
+"id": 16122,
+"slug": "loom",
+"name": "LOOM",
+"added": 471
+},
+{
+"id": 45957,
+"slug": "prince-of-persia-nes",
+"name": "Prince of Persia (1989)",
+"added": 321
+},
+{
+"id": 20617,
+"slug": "the-chaos-engine",
+"name": "The Chaos Engine",
+"added": 310
+}
+]
+},
+{
+"id": 50,
+"name": "Atari XEGS",
+"slug": "atari-xegs",
+"games_count": 22,
+"image_background": "https://media.rawg.io/media/screenshots/769/7691726d70c23c029903df08858df001.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 52512,
+"slug": "arcade-archives-donkey-kong",
+"name": "Donkey Kong",
+"added": 202
+},
+{
+"id": 52434,
+"slug": "mario-bros-1983",
+"name": "Mario Bros. (1983)",
+"added": 157
+},
+{
+"id": 34571,
+"slug": "lode-runner-1983",
+"name": "Lode Runner (1983)",
+"added": 64
+},
+{
+"id": 53687,
+"slug": "archon-the-light-and-the-dark",
+"name": "Archon: The Light and the Dark",
+"added": 10
+},
+{
+"id": 52605,
+"slug": "summer-games",
+"name": "Summer Games",
+"added": 9
+},
+{
+"id": 52413,
+"slug": "crossbow",
+"name": "Crossbow",
+"added": 9
+}
+]
+},
+{
+"id": 55,
+"name": "Classic Macintosh",
+"slug": "macintosh",
+"games_count": 629,
+"image_background": "https://media.rawg.io/media/screenshots/f03/f031bb8244dd6b6553cf110f435966de.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 13554,
+"slug": "fallout-a-post-nuclear-role-playing-game",
+"name": "Fallout: A Post Nuclear Role Playing Game",
+"added": 5136
+},
+{
+"id": 2518,
+"slug": "max-payne",
+"name": "Max Payne",
+"added": 2886
+},
+{
+"id": 12018,
+"slug": "star-wars-jedi-knight-ii-jedi-outcast",
+"name": "STAR WARS Jedi Knight II - Jedi Outcast",
+"added": 2181
+},
+{
+"id": 15851,
+"slug": "star-wars-dark-forces-2",
+"name": "STAR WARS - Dark Forces",
+"added": 1896
+},
+{
+"id": 57908,
+"slug": "tomb-raider-ii",
+"name": "Tomb Raider II",
+"added": 1886
+},
+{
+"id": 17975,
+"slug": "doom-ii",
+"name": "DOOM II",
+"added": 1759
+}
+]
+},
+{
+"id": 166,
+"name": "Commodore / Amiga",
+"slug": "commodore-amiga",
+"games_count": 2025,
+"image_background": "https://media.rawg.io/media/games/cfd/cfdfaaddca4f351b27f965a2f97af0f4.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 20569,
+"slug": "ufo-enemy-unknown",
+"name": "X-COM: UFO Defense",
+"added": 2475
+},
+{
+"id": 30119,
+"slug": "wasteland",
+"name": "Wasteland",
+"added": 1561
+},
+{
+"id": 54285,
+"slug": "mortal-kombat",
+"name": "Mortal Kombat",
+"added": 1450
+},
+{
+"id": 5383,
+"slug": "worms",
+"name": "Worms",
+"added": 1367
+},
+{
+"id": 22734,
+"slug": "beneath-a-steel-sky",
+"name": "Beneath a Steel Sky",
+"added": 1347
+},
+{
+"id": 54492,
+"slug": "quake-2",
+"name": "Quake II (1997)",
+"added": 1247
+}
+]
+},
+{
+"id": 106,
+"name": "Dreamcast",
+"slug": "dreamcast",
+"games_count": 341,
+"image_background": "https://media.rawg.io/media/screenshots/a64/a64b59aec49d84b4b89001c10eb6325d.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 19542,
+"slug": "half-life-blue-shift",
+"name": "Half-Life: Blue Shift",
+"added": 4022
+},
+{
+"id": 53341,
+"slug": "jet-set-radio-2012",
+"name": "Jet Set Radio",
+"added": 3594
+},
+{
+"id": 5159,
+"slug": "resident-evil-2",
+"name": "Resident Evil 2 (1998)",
+"added": 3026
+},
+{
+"id": 20466,
+"slug": "worms-armageddon",
+"name": "Worms Armageddon",
+"added": 1723
+},
+{
+"id": 54629,
+"slug": "crazy-taxi",
+"name": "Crazy Taxi (1999)",
+"added": 1689
+},
+{
+"id": 343597,
+"slug": "sonic-adventure-2",
+"name": "Sonic Adventure 2",
+"added": 1500
+}
+]
+},
+{
+"id": 26,
+"name": "Game Boy",
+"slug": "game-boy",
+"games_count": 577,
+"image_background": "https://media.rawg.io/media/screenshots/61f/61f183e3d12c7846ed6bd3c027a9fa47.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 5193,
+"slug": "oddworld-abes-oddysee",
+"name": "Oddworld: Abe's Oddysee",
+"added": 3859
+},
+{
+"id": 54285,
+"slug": "mortal-kombat",
+"name": "Mortal Kombat",
+"added": 1450
+},
+{
+"id": 5383,
+"slug": "worms",
+"name": "Worms",
+"added": 1367
+},
+{
+"id": 52998,
+"slug": "grand-theft-auto-1998",
+"name": "Grand Theft Auto",
+"added": 1184
+},
+{
+"id": 14829,
+"slug": "turok",
+"name": "Turok: Dinosaur Hunter",
+"added": 769
+},
+{
+"id": 52175,
+"slug": "battletoads",
+"name": "Battletoads",
+"added": 714
+}
+]
+},
+{
+"id": 24,
+"name": "Game Boy Advance",
+"slug": "game-boy-advance",
+"games_count": 913,
+"image_background": "https://media.rawg.io/media/games/fd6/fd6e2692bd4eeb470bccbf282155839b.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 53341,
+"slug": "jet-set-radio-2012",
+"name": "Jet Set Radio",
+"added": 3594
+},
+{
+"id": 5159,
+"slug": "resident-evil-2",
+"name": "Resident Evil 2 (1998)",
+"added": 3026
+},
+{
+"id": 2518,
+"slug": "max-payne",
+"name": "Max Payne",
+"added": 2886
+},
+{
+"id": 17975,
+"slug": "doom-ii",
+"name": "DOOM II",
+"added": 1759
+},
+{
+"id": 19646,
+"slug": "splinter-cell",
+"name": "Tom Clancy's Splinter Cell",
+"added": 1241
+},
+{
+"id": 4005,
+"slug": "wolfenstein-3d",
+"name": "Wolfenstein 3D",
+"added": 1066
+}
+]
+},
+{
+"id": 43,
+"name": "Game Boy Color",
+"slug": "game-boy-color",
+"games_count": 378,
+"image_background": "https://media.rawg.io/media/screenshots/fd2/fd22fcd8470c96a6cf30051c3d249a6b.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 20466,
+"slug": "worms-armageddon",
+"name": "Worms Armageddon",
+"added": 1723
+},
+{
+"id": 52997,
+"slug": "grand-theft-auto-2-1999",
+"name": "Grand Theft Auto 2 (1999)",
+"added": 1247
+},
+{
+"id": 52998,
+"slug": "grand-theft-auto-1998",
+"name": "Grand Theft Auto",
+"added": 1184
+},
+{
+"id": 5192,
+"slug": "oddworld-abes-exoddus",
+"name": "Oddworld: Abe's Exoddus",
+"added": 953
+},
+{
+"id": 25080,
+"slug": "super-mario-bros",
+"name": "Super Mario Bros.",
+"added": 801
+},
+{
+"id": 24030,
+"slug": "super-mario-bros-3",
+"name": "Super Mario Bros. 3",
+"added": 661
+}
+]
+},
+{
+"id": 105,
+"name": "GameCube",
+"slug": "gamecube",
+"games_count": 635,
+"image_background": "https://media.rawg.io/media/games/d64/d646810b629081cc12aec49ed9f49441.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 56184,
+"slug": "resident-evil-4",
+"name": "Resident Evil 4",
+"added": 3722
+},
+{
+"id": 5159,
+"slug": "resident-evil-2",
+"name": "Resident Evil 2 (1998)",
+"added": 3026
+},
+{
+"id": 3449,
+"slug": "resident-evil",
+"name": "Resident Evil",
+"added": 2962
+},
+{
+"id": 19592,
+"slug": "hitman-2-silent-assassin",
+"name": "Hitman 2: Silent Assassin",
+"added": 2882
+},
+{
+"id": 5298,
+"slug": "tomb-raider-legend",
+"name": "Tomb Raider: Legend",
+"added": 2440
+},
+{
+"id": 12018,
+"slug": "star-wars-jedi-knight-ii-jedi-outcast",
+"name": "STAR WARS Jedi Knight II - Jedi Outcast",
+"added": 2181
+}
+]
+},
+{
+"id": 77,
+"name": "Game Gear",
+"slug": "game-gear",
+"games_count": 156,
+"image_background": "https://media.rawg.io/media/screenshots/be2/be2a71bfbcb742306eee40fdfc6e6948.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 54285,
+"slug": "mortal-kombat",
+"name": "Mortal Kombat",
+"added": 1450
+},
+{
+"id": 53551,
+"slug": "sonic-the-hedgehog",
+"name": "Sonic the Hedgehog (1991)",
+"added": 994
+},
+{
+"id": 2552,
+"slug": "sonic-the-hedgehog-2",
+"name": "Sonic the Hedgehog 2",
+"added": 909
+},
+{
+"id": 4678,
+"slug": "streets-of-rage-2",
+"name": "Streets of Rage 2",
+"added": 677
+},
+{
+"id": 52175,
+"slug": "battletoads",
+"name": "Battletoads",
+"added": 714
+},
+{
+"id": 24881,
+"slug": "pac-man",
+"name": "Pac-Man",
+"added": 439
+}
+]
+},
+{
+"id": 167,
+"name": "Genesis",
+"slug": "genesis",
+"games_count": 802,
+"image_background": "https://media.rawg.io/media/games/32d/32d851318b042aba3df62e52d868d599.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 54285,
+"slug": "mortal-kombat",
+"name": "Mortal Kombat",
+"added": 1450
+},
+{
+"id": 5383,
+"slug": "worms",
+"name": "Worms",
+"added": 1367
+},
+{
+"id": 53551,
+"slug": "sonic-the-hedgehog",
+"name": "Sonic the Hedgehog (1991)",
+"added": 994
+},
+{
+"id": 2552,
+"slug": "sonic-the-hedgehog-2",
+"name": "Sonic the Hedgehog 2",
+"added": 909
+},
+{
+"id": 55348,
+"slug": "batman",
+"name": "Batman",
+"added": 780
+},
+{
+"id": 4678,
+"slug": "streets-of-rage-2",
+"name": "Streets of Rage 2",
+"added": 677
+}
+]
+},
+{
+"id": 3,
+"name": "iOS",
+"slug": "ios",
+"games_count": 67204,
+"image_background": "https://media.rawg.io/media/games/d1f/d1f872a48286b6b751670817d5c1e1be.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 3439,
+"slug": "life-is-strange-episode-1-2",
+"name": "Life is Strange",
+"added": 9679
+},
+{
+"id": 1030,
+"slug": "limbo",
+"name": "Limbo",
+"added": 8899
+},
+{
+"id": 4286,
+"slug": "bioshock",
+"name": "BioShock",
+"added": 8868
+},
+{
+"id": 23027,
+"slug": "the-walking-dead",
+"name": "The Walking Dead: Season 1",
+"added": 7497
+},
+{
+"id": 422,
+"slug": "terraria",
+"name": "Terraria",
+"added": 6986
+},
+{
+"id": 416,
+"slug": "grand-theft-auto-san-andreas",
+"name": "Grand Theft Auto: San Andreas",
+"added": 6418
+}
+]
+},
+{
+"id": 112,
+"name": "Jaguar",
+"slug": "jaguar",
+"games_count": 27,
+"image_background": "https://media.rawg.io/media/screenshots/a77/a776e07504ecc1b039a97135e44e26df.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 5383,
+"slug": "worms",
+"name": "Worms",
+"added": 1367
+},
+{
+"id": 52884,
+"slug": "doom-2",
+"name": "Doom",
+"added": 736
+},
+{
+"id": 29908,
+"slug": "another-world",
+"name": "Another World",
+"added": 623
+},
+{
+"id": 22953,
+"slug": "theme-park",
+"name": "Theme Park",
+"added": 171
+},
+{
+"id": 5463,
+"slug": "rayman",
+"name": "Rayman",
+"added": 160
+},
+{
+"id": 4377,
+"slug": "myst",
+"name": "Myst",
+"added": 127
+}
+]
+},
+{
+"id": 6,
+"name": "Linux",
+"slug": "linux",
+"games_count": 41132,
+"image_background": "https://media.rawg.io/media/games/ed5/ed5b7d01dd68fd8d598c91ad61f153af.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 4200,
+"slug": "portal-2",
+"name": "Portal 2",
+"added": 11429
+},
+{
+"id": 4062,
+"slug": "bioshock-infinite",
+"name": "BioShock Infinite",
+"added": 9744
+},
+{
+"id": 13536,
+"slug": "portal",
+"name": "Portal",
+"added": 9702
+},
+{
+"id": 3439,
+"slug": "life-is-strange-episode-1-2",
+"name": "Life is Strange",
+"added": 9679
+},
+{
+"id": 1030,
+"slug": "limbo",
+"name": "Limbo",
+"added": 8899
+},
+{
+"id": 13537,
+"slug": "half-life-2",
+"name": "Half-Life 2",
+"added": 8818
+}
+]
+},
+{
+"id": 5,
+"name": "macOS",
+"slug": "macos",
+"games_count": 59460,
+"image_background": "https://media.rawg.io/media/games/88c/88c5b4d7c80276c03ff62aebb1a99ad4.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 4200,
+"slug": "portal-2",
+"name": "Portal 2",
+"added": 11429
+},
+{
+"id": 5286,
+"slug": "tomb-raider",
+"name": "Tomb Raider (2013)",
+"added": 10355
+},
+{
+"id": 802,
+"slug": "borderlands-2",
+"name": "Borderlands 2",
+"added": 9814
+},
+{
+"id": 13536,
+"slug": "portal",
+"name": "Portal",
+"added": 9702
+},
+{
+"id": 3439,
+"slug": "life-is-strange-episode-1-2",
+"name": "Life is Strange",
+"added": 9679
+},
+{
+"id": 1030,
+"slug": "limbo",
+"name": "Limbo",
+"added": 8899
+}
+]
+},
+{
+"id": 12,
+"name": "Neo Geo",
+"slug": "neogeo",
+"games_count": 95,
+"image_background": "https://media.rawg.io/media/screenshots/b0f/b0f7e6d8f4dcb40fa7dca1fd68583cdc.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 1488,
+"slug": "metal-slug-3",
+"name": "METAL SLUG 3",
+"added": 1615
+},
+{
+"id": 14948,
+"slug": "metal-slug",
+"name": "METAL SLUG",
+"added": 622
+},
+{
+"id": 23669,
+"slug": "the-king-of-fighters-2002",
+"name": "THE KING OF FIGHTERS 2002",
+"added": 565
+},
+{
+"id": 24881,
+"slug": "pac-man",
+"name": "Pac-Man",
+"added": 439
+},
+{
+"id": 6256,
+"slug": "metal-slug-2",
+"name": "METAL SLUG 2",
+"added": 373
+},
+{
+"id": 3802,
+"slug": "double-dragon",
+"name": "Double Dragon",
+"added": 276
+}
+]
+},
+{
+"id": 49,
+"name": "NES",
+"slug": "nes",
+"games_count": 898,
+"image_background": "https://media.rawg.io/media/games/a75/a75e4cb9742bb172d6bd3deb4cc4109e.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 54122,
+"slug": "ultima-iv-quest-of-the-avatar",
+"name": "Ultima IV: Quest of the Avatar",
+"added": 1145
+},
+{
+"id": 25080,
+"slug": "super-mario-bros",
+"name": "Super Mario Bros.",
+"added": 801
+},
+{
+"id": 24030,
+"slug": "super-mario-bros-3",
+"name": "Super Mario Bros. 3",
+"added": 661
+},
+{
+"id": 52175,
+"slug": "battletoads",
+"name": "Battletoads",
+"added": 714
+},
+{
+"id": 24881,
+"slug": "pac-man",
+"name": "Pac-Man",
+"added": 439
+},
+{
+"id": 24072,
+"slug": "the-legend-of-zelda",
+"name": "The Legend of Zelda",
+"added": 438
+}
+]
+},
+{
+"id": 8,
+"name": "Nintendo 3DS",
+"slug": "nintendo-3ds",
+"games_count": 1715,
+"image_background": "https://media.rawg.io/media/screenshots/be1/be17f78d80b50121fa2ed6d4562d403e.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 422,
+"slug": "terraria",
+"name": "Terraria",
+"added": 6986
+},
+{
+"id": 2597,
+"slug": "lego-lord-of-the-rings",
+"name": "LEGO The Lord of the Rings",
+"added": 3511
+},
+{
+"id": 22509,
+"slug": "minecraft",
+"name": "Minecraft",
+"added": 3359
+},
+{
+"id": 250,
+"slug": "the-binding-of-isaac-rebirth",
+"name": "The Binding of Isaac: Rebirth",
+"added": 3174
+},
+{
+"id": 3729,
+"slug": "lego-the-hobbit",
+"name": "LEGO The Hobbit",
+"added": 3085
+},
+{
+"id": 2434,
+"slug": "vvvvvv",
+"name": "VVVVVV",
+"added": 2737
+}
+]
+},
+{
+"id": 83,
+"name": "Nintendo 64",
+"slug": "nintendo-64",
+"games_count": 353,
+"image_background": "https://media.rawg.io/media/games/d64/d646810b629081cc12aec49ed9f49441.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 5159,
+"slug": "resident-evil-2",
+"name": "Resident Evil 2 (1998)",
+"added": 3026
+},
+{
+"id": 20466,
+"slug": "worms-armageddon",
+"name": "Worms Armageddon",
+"added": 1723
+},
+{
+"id": 54492,
+"slug": "quake-2",
+"name": "Quake II (1997)",
+"added": 1247
+},
+{
+"id": 54491,
+"slug": "quake",
+"name": "Quake",
+"added": 1218
+},
+{
+"id": 22900,
+"slug": "daikatana",
+"name": "John Romero's Daikatana",
+"added": 978
+},
+{
+"id": 25097,
+"slug": "the-legend-of-zelda-ocarina-of-time",
+"name": "The Legend of Zelda: Ocarina of Time",
+"added": 967
+}
+]
+},
+{
+"id": 9,
+"name": "Nintendo DS",
+"slug": "nintendo-ds",
+"games_count": 2285,
+"image_background": "https://media.rawg.io/media/screenshots/4f2/4f2246a85225b7a91d63990fe540b7c4.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 865,
+"slug": "call-of-duty-black-ops",
+"name": "Call of Duty: Black Ops",
+"added": 4317
+},
+{
+"id": 5578,
+"slug": "grid",
+"name": "Race Driver: Grid",
+"added": 3616
+},
+{
+"id": 2597,
+"slug": "lego-lord-of-the-rings",
+"name": "LEGO The Lord of the Rings",
+"added": 3511
+},
+{
+"id": 3486,
+"slug": "syberia",
+"name": "Syberia",
+"added": 2834
+},
+{
+"id": 4869,
+"slug": "tomb-raider-underworld",
+"name": "Tomb Raider: Underworld",
+"added": 2809
+},
+{
+"id": 5528,
+"slug": "call-of-duty-world-at-war",
+"name": "Call of Duty: World at War",
+"added": 2763
+}
+]
+},
+{
+"id": 13,
+"name": "Nintendo DSi",
+"slug": "nintendo-dsi",
+"games_count": 28,
+"image_background": null,
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 19309,
+"slug": "plants-vs-zombies-goty-edition",
+"name": "Plants vs. Zombies GOTY Edition",
+"added": 2146
+},
+{
+"id": 949,
+"slug": "cut-the-rope",
+"name": "Cut the Rope",
+"added": 372
+},
+{
+"id": 5463,
+"slug": "rayman",
+"name": "Rayman",
+"added": 160
+},
+{
+"id": 22727,
+"slug": "jagged-alliance",
+"name": "Jagged Alliance",
+"added": 75
+},
+{
+"id": 53802,
+"slug": "dragons-lair",
+"name": "Dragon's Lair",
+"added": 26
+},
+{
+"id": 25953,
+"slug": "mario-vs-donkey-kong-minis-march-again",
+"name": "Mario vs. Donkey Kong: Minis March Again!",
+"added": 18
+}
+]
+},
+{
+"id": 7,
+"name": "Nintendo Switch",
+"slug": "nintendo-switch",
+"games_count": 3426,
+"image_background": "https://media.rawg.io/media/games/4cf/4cfc6b7f1850590a4634b08bfab308ab.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 3328,
+"slug": "the-witcher-3-wild-hunt",
+"name": "The Witcher 3: Wild Hunt",
+"added": 11235
+},
+{
+"id": 5679,
+"slug": "the-elder-scrolls-v-skyrim",
+"name": "The Elder Scrolls V: Skyrim",
+"added": 10238
+},
+{
+"id": 4062,
+"slug": "bioshock-infinite",
+"name": "BioShock Infinite",
+"added": 9744
+},
+{
+"id": 1030,
+"slug": "limbo",
+"name": "Limbo",
+"added": 8899
+},
+{
+"id": 2454,
+"slug": "doom",
+"name": "DOOM (2016)",
+"added": 8074
+},
+{
+"id": 3272,
+"slug": "rocket-league",
+"name": "Rocket League",
+"added": 7616
+}
+]
+},
+{
+"id": 4,
+"name": "PC",
+"slug": "pc",
+"games_count": 263805,
+"image_background": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 3498,
+"slug": "grand-theft-auto-v",
+"name": "Grand Theft Auto V",
+"added": 13059
+},
+{
+"id": 4200,
+"slug": "portal-2",
+"name": "Portal 2",
+"added": 11429
+},
+{
+"id": 3328,
+"slug": "the-witcher-3-wild-hunt",
+"name": "The Witcher 3: Wild Hunt",
+"added": 11235
+},
+{
+"id": 5286,
+"slug": "tomb-raider",
+"name": "Tomb Raider (2013)",
+"added": 10355
+},
+{
+"id": 5679,
+"slug": "the-elder-scrolls-v-skyrim",
+"name": "The Elder Scrolls V: Skyrim",
+"added": 10238
+},
+{
+"id": 12020,
+"slug": "left-4-dead-2",
+"name": "Left 4 Dead 2",
+"added": 9878
+}
+]
+},
+{
+"id": 27,
+"name": "PlayStation",
+"slug": "playstation1",
+"games_count": 1518,
+"image_background": "https://media.rawg.io/media/screenshots/df5/df5eee47410d0625f4f2ef708c95faf9.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 5193,
+"slug": "oddworld-abes-oddysee",
+"name": "Oddworld: Abe's Oddysee",
+"added": 3859
+},
+{
+"id": 5159,
+"slug": "resident-evil-2",
+"name": "Resident Evil 2 (1998)",
+"added": 3026
+},
+{
+"id": 3449,
+"slug": "resident-evil",
+"name": "Resident Evil",
+"added": 2962
+},
+{
+"id": 20569,
+"slug": "ufo-enemy-unknown",
+"name": "X-COM: UFO Defense",
+"added": 2475
+},
+{
+"id": 52939,
+"slug": "final-fantasy-vii",
+"name": "Final Fantasy VII",
+"added": 2441
+},
+{
+"id": 5488,
+"slug": "crash-bandicoot",
+"name": "Crash Bandicoot",
+"added": 1918
+}
+]
+},
+{
+"id": 15,
+"name": "PlayStation 2",
+"slug": "playstation2",
+"games_count": 1834,
+"image_background": "https://media.rawg.io/media/games/dd7/dd72d8a527cd9245c7eb7cd05aa53efa.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 416,
+"slug": "grand-theft-auto-san-andreas",
+"name": "Grand Theft Auto: San Andreas",
+"added": 6418
+},
+{
+"id": 18080,
+"slug": "half-life",
+"name": "Half-Life",
+"added": 5967
+},
+{
+"id": 430,
+"slug": "grand-theft-auto-vice-city",
+"name": "Grand Theft Auto: Vice City",
+"added": 5491
+},
+{
+"id": 2361,
+"slug": "psychonauts",
+"name": "Psychonauts",
+"added": 5088
+},
+{
+"id": 432,
+"slug": "grand-theft-auto-iii",
+"name": "Grand Theft Auto III",
+"added": 4258
+},
+{
+"id": 56184,
+"slug": "resident-evil-4",
+"name": "Resident Evil 4",
+"added": 3722
+}
+]
+},
+{
+"id": 16,
+"name": "PlayStation 3",
+"slug": "playstation3",
+"games_count": 3605,
+"image_background": "https://media.rawg.io/media/games/1bb/1bb86c35ffa3eb0d299b01a7c65bf908.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 3498,
+"slug": "grand-theft-auto-v",
+"name": "Grand Theft Auto V",
+"added": 13059
+},
+{
+"id": 4200,
+"slug": "portal-2",
+"name": "Portal 2",
+"added": 11429
+},
+{
+"id": 5286,
+"slug": "tomb-raider",
+"name": "Tomb Raider (2013)",
+"added": 10355
+},
+{
+"id": 5679,
+"slug": "the-elder-scrolls-v-skyrim",
+"name": "The Elder Scrolls V: Skyrim",
+"added": 10238
+},
+{
+"id": 802,
+"slug": "borderlands-2",
+"name": "Borderlands 2",
+"added": 9814
+},
+{
+"id": 4062,
+"slug": "bioshock-infinite",
+"name": "BioShock Infinite",
+"added": 9744
+}
+]
+},
+{
+"id": 18,
+"name": "PlayStation 4",
+"slug": "playstation4",
+"games_count": 5163,
+"image_background": "https://media.rawg.io/media/games/709/709bf81f874ce5d25d625b37b014cb63.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 3498,
+"slug": "grand-theft-auto-v",
+"name": "Grand Theft Auto V",
+"added": 13059
+},
+{
+"id": 3328,
+"slug": "the-witcher-3-wild-hunt",
+"name": "The Witcher 3: Wild Hunt",
+"added": 11235
+},
+{
+"id": 5286,
+"slug": "tomb-raider",
+"name": "Tomb Raider (2013)",
+"added": 10355
+},
+{
+"id": 802,
+"slug": "borderlands-2",
+"name": "Borderlands 2",
+"added": 9814
+},
+{
+"id": 4062,
+"slug": "bioshock-infinite",
+"name": "BioShock Infinite",
+"added": 9744
+},
+{
+"id": 3439,
+"slug": "life-is-strange-episode-1-2",
+"name": "Life is Strange",
+"added": 9679
+}
+]
+},
+{
+"id": 187,
+"name": "PlayStation 5",
+"slug": "playstation5",
+"games_count": 90,
+"image_background": "https://media.rawg.io/media/games/f39/f3971e0dfde68f234c56ae789433b219.jpg",
+"image": null,
+"year_start": 2020,
+"year_end": null,
+"games": [
+{
+"id": 3498,
+"slug": "grand-theft-auto-v",
+"name": "Grand Theft Auto V",
+"added": 13059
+},
+{
+"id": 32,
+"slug": "destiny-2",
+"name": "Destiny 2",
+"added": 7551
+},
+{
+"id": 766,
+"slug": "warframe",
+"name": "Warframe",
+"added": 7197
+},
+{
+"id": 8488,
+"slug": "tom-clancys-rainbow-six-siege-2",
+"name": "Tom Clancy's Rainbow Six Siege",
+"added": 4139
+},
+{
+"id": 51325,
+"slug": "the-last-of-us-part-2",
+"name": "The Last of Us Part II",
+"added": 3570
+},
+{
+"id": 58812,
+"slug": "control",
+"name": "Control",
+"added": 3168
+}
+]
+},
+{
+"id": 17,
+"name": "PSP",
+"slug": "psp",
+"games_count": 1560,
+"image_background": "https://media.rawg.io/media/games/b2d/b2db4496b084b235742cf6e9894bbf36.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 5193,
+"slug": "oddworld-abes-oddysee",
+"name": "Oddworld: Abe's Oddysee",
+"added": 3859
+},
+{
+"id": 5159,
+"slug": "resident-evil-2",
+"name": "Resident Evil 2 (1998)",
+"added": 3026
+},
+{
+"id": 13886,
+"slug": "star-wars-battlefront-ii-2",
+"name": "STAR WARS Battlefront 2 (2005)",
+"added": 2905
+},
+{
+"id": 5298,
+"slug": "tomb-raider-legend",
+"name": "Tomb Raider: Legend",
+"added": 2440
+},
+{
+"id": 52939,
+"slug": "final-fantasy-vii",
+"name": "Final Fantasy VII",
+"added": 2441
+},
+{
+"id": 5297,
+"slug": "tomb-raider-anniversary",
+"name": "Tomb Raider: Anniversary",
+"added": 2335
+}
+]
+},
+{
+"id": 19,
+"name": "PS Vita",
+"slug": "ps-vita",
+"games_count": 1926,
+"image_background": "https://media.rawg.io/media/games/f99/f9979698c43fd84c3ab69280576dd3af.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 1030,
+"slug": "limbo",
+"name": "Limbo",
+"added": 8899
+},
+{
+"id": 23027,
+"slug": "the-walking-dead",
+"name": "The Walking Dead: Season 1",
+"added": 7497
+},
+{
+"id": 422,
+"slug": "terraria",
+"name": "Terraria",
+"added": 6986
+},
+{
+"id": 3612,
+"slug": "hotline-miami",
+"name": "Hotline Miami",
+"added": 6554
+},
+{
+"id": 3144,
+"slug": "super-meat-boy",
+"name": "Super Meat Boy",
+"added": 6367
+},
+{
+"id": 17540,
+"slug": "injustice-gods-among-us-ultimate-edition",
+"name": "Injustice: Gods Among Us Ultimate Edition",
+"added": 5863
+}
+]
+},
+{
+"id": 117,
+"name": "SEGA 32X",
+"slug": "sega-32x",
+"games_count": 46,
+"image_background": "https://media.rawg.io/media/screenshots/f12/f1290d54a99f637def413baa6642fa0c.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 52884,
+"slug": "doom-2",
+"name": "Doom",
+"added": 736
+},
+{
+"id": 29426,
+"slug": "mortal-kombat-2",
+"name": "Mortal Kombat 2",
+"added": 247
+},
+{
+"id": 53781,
+"slug": "darkwing-duck",
+"name": "Disney's Darkwing Duck",
+"added": 121
+},
+{
+"id": 32519,
+"slug": "wwf-wrestlemania-the-arcade-game",
+"name": "WWF WrestleMania: The Arcade Game",
+"added": 68
+},
+{
+"id": 32252,
+"slug": "blackthorne",
+"name": "Blackthorne",
+"added": 43
+},
+{
+"id": 30645,
+"slug": "primal-rage",
+"name": "Primal Rage",
+"added": 46
+}
+]
+},
+{
+"id": 119,
+"name": "SEGA CD",
+"slug": "sega-cd",
+"games_count": 153,
+"image_background": "https://media.rawg.io/media/games/360/360f00cbb4b4364b9af0e7ff8e397b65.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 1559,
+"slug": "sonic-cd",
+"name": "Sonic CD",
+"added": 1504
+},
+{
+"id": 54285,
+"slug": "mortal-kombat",
+"name": "Mortal Kombat",
+"added": 1450
+},
+{
+"id": 29391,
+"slug": "eye-of-the-beholder",
+"name": "Eye of the Beholder",
+"added": 640
+},
+{
+"id": 45957,
+"slug": "prince-of-persia-nes",
+"name": "Prince of Persia (1989)",
+"added": 321
+},
+{
+"id": 29839,
+"slug": "the-secret-of-monkey-island",
+"name": "The Secret of Monkey Island",
+"added": 241
+},
+{
+"id": 25663,
+"slug": "earthworm-jim",
+"name": "Earthworm Jim",
+"added": 205
+}
+]
+},
+{
+"id": 74,
+"name": "SEGA Master System",
+"slug": "sega-master-system",
+"games_count": 199,
+"image_background": "https://media.rawg.io/media/screenshots/251/25178075aa2eda1174c40c9cf2baeaa4.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 54285,
+"slug": "mortal-kombat",
+"name": "Mortal Kombat",
+"added": 1450
+},
+{
+"id": 54122,
+"slug": "ultima-iv-quest-of-the-avatar",
+"name": "Ultima IV: Quest of the Avatar",
+"added": 1145
+},
+{
+"id": 4678,
+"slug": "streets-of-rage-2",
+"name": "Streets of Rage 2",
+"added": 677
+},
+{
+"id": 53207,
+"slug": "comix-zone-1995",
+"name": "Comix Zone",
+"added": 499
+},
+{
+"id": 914,
+"slug": "wonder-boy-the-dragons-trap",
+"name": "Wonder Boy: The Dragon's Trap",
+"added": 480
+},
+{
+"id": 45957,
+"slug": "prince-of-persia-nes",
+"name": "Prince of Persia (1989)",
+"added": 321
+}
+]
+},
+{
+"id": 107,
+"name": "SEGA Saturn",
+"slug": "sega-saturn",
+"games_count": 295,
+"image_background": "https://media.rawg.io/media/games/65f/65f84d40bf3f5c265d9ba09e34244541.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 5383,
+"slug": "worms",
+"name": "Worms",
+"added": 1367
+},
+{
+"id": 52790,
+"slug": "castlevania-sotn",
+"name": "Castlevania: Symphony of the Night",
+"added": 980
+},
+{
+"id": 56183,
+"slug": "resident-evil-2002",
+"name": "Resident Evil (2002)",
+"added": 973
+},
+{
+"id": 28300,
+"slug": "nights-into-dreams",
+"name": "NiGHTS into dreams...",
+"added": 858
+},
+{
+"id": 21285,
+"slug": "hexen-for-windows-95",
+"name": "HeXen: Beyond Heretic",
+"added": 600
+},
+{
+"id": 28510,
+"slug": "duke-nukem-3d",
+"name": "Duke Nukem 3D",
+"added": 596
+}
+]
+},
+{
+"id": 79,
+"name": "SNES",
+"slug": "snes",
+"games_count": 832,
+"image_background": "https://media.rawg.io/media/games/4da/4da63441cb94d7adb4d954871b65db30.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 54285,
+"slug": "mortal-kombat",
+"name": "Mortal Kombat",
+"added": 1450
+},
+{
+"id": 5383,
+"slug": "worms",
+"name": "Worms",
+"added": 1367
+},
+{
+"id": 4005,
+"slug": "wolfenstein-3d",
+"name": "Wolfenstein 3D",
+"added": 1066
+},
+{
+"id": 24899,
+"slug": "super-mario-world",
+"name": "Super Mario World",
+"added": 851
+},
+{
+"id": 25080,
+"slug": "super-mario-bros",
+"name": "Super Mario Bros.",
+"added": 801
+},
+{
+"id": 25096,
+"slug": "the-legend-of-zelda-a-link-to-the-past",
+"name": "The Legend of Zelda: A Link to the Past",
+"added": 776
+}
+]
+},
+{
+"id": 171,
+"name": "Web",
+"slug": "web",
+"games_count": 104832,
+"image_background": "https://media.rawg.io/media/screenshots/917/9172a9606559ba19417af6a65a7c3aee.jpeg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 32,
+"slug": "destiny-2",
+"name": "Destiny 2",
+"added": 7551
+},
+{
+"id": 3144,
+"slug": "super-meat-boy",
+"name": "Super Meat Boy",
+"added": 6367
+},
+{
+"id": 2623,
+"slug": "resident-evil-6",
+"name": "Resident Evil 6",
+"added": 3601
+},
+{
+"id": 7819,
+"slug": "superhot",
+"name": "SUPERHOT",
+"added": 3498
+},
+{
+"id": 2131,
+"slug": "race-the-sun",
+"name": "Race The Sun",
+"added": 2623
+},
+{
+"id": 17473,
+"slug": "quake-live",
+"name": "Quake Live",
+"added": 1872
+}
+]
+},
+{
+"id": 11,
+"name": "Wii",
+"slug": "wii",
+"games_count": 2333,
+"image_background": "https://media.rawg.io/media/screenshots/aad/aadf5972632dc2ccdacacaf191475c7a.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 865,
+"slug": "call-of-duty-black-ops",
+"name": "Call of Duty: Black Ops",
+"added": 4317
+},
+{
+"id": 11276,
+"slug": "call-of-duty-modern-warfare-3",
+"name": "Call of Duty: Modern Warfare 3",
+"added": 3909
+},
+{
+"id": 56184,
+"slug": "resident-evil-4",
+"name": "Resident Evil 4",
+"added": 3722
+},
+{
+"id": 2597,
+"slug": "lego-lord-of-the-rings",
+"name": "LEGO The Lord of the Rings",
+"added": 3511
+},
+{
+"id": 1140,
+"slug": "world-of-goo",
+"name": "World of Goo",
+"added": 2984
+},
+{
+"id": 4869,
+"slug": "tomb-raider-underworld",
+"name": "Tomb Raider: Underworld",
+"added": 2809
+}
+]
+},
+{
+"id": 10,
+"name": "Wii U",
+"slug": "wii-u",
+"games_count": 1270,
+"image_background": "https://media.rawg.io/media/games/a12/a12f806432cb385bc286f0935c49cd14.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 422,
+"slug": "terraria",
+"name": "Terraria",
+"added": 6986
+},
+{
+"id": 3144,
+"slug": "super-meat-boy",
+"name": "Super Meat Boy",
+"added": 6367
+},
+{
+"id": 3841,
+"slug": "assassins-creed-iv-black-flag",
+"name": "Assassin’s Creed IV: Black Flag",
+"added": 5629
+},
+{
+"id": 3687,
+"slug": "watch-dogs",
+"name": "Watch Dogs",
+"added": 4957
+},
+{
+"id": 13305,
+"slug": "assassins-creed-iii-2",
+"name": "Assassin’s Creed III",
+"added": 4679
+},
+{
+"id": 3876,
+"slug": "deus-ex-human-revolution-directors-cut",
+"name": "Deus Ex: Human Revolution - Director's Cut",
+"added": 4566
+}
+]
+},
+{
+"id": 80,
+"name": "Xbox",
+"slug": "xbox-old",
+"games_count": 670,
+"image_background": "https://media.rawg.io/media/games/9c4/9c47f320eb73c9a02d462e12f6206b26.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 13537,
+"slug": "half-life-2",
+"name": "Half-Life 2",
+"added": 8818
+},
+{
+"id": 416,
+"slug": "grand-theft-auto-san-andreas",
+"name": "Grand Theft Auto: San Andreas",
+"added": 6418
+},
+{
+"id": 430,
+"slug": "grand-theft-auto-vice-city",
+"name": "Grand Theft Auto: Vice City",
+"added": 5491
+},
+{
+"id": 19301,
+"slug": "counter-strike",
+"name": "Counter-Strike",
+"added": 5140
+},
+{
+"id": 2361,
+"slug": "psychonauts",
+"name": "Psychonauts",
+"added": 5088
+},
+{
+"id": 432,
+"slug": "grand-theft-auto-iii",
+"name": "Grand Theft Auto III",
+"added": 4258
+}
+]
+},
+{
+"id": 14,
+"name": "Xbox 360",
+"slug": "xbox360",
+"games_count": 2554,
+"image_background": "https://media.rawg.io/media/games/d58/d588947d4286e7b5e0e12e1bea7d9844.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 3498,
+"slug": "grand-theft-auto-v",
+"name": "Grand Theft Auto V",
+"added": 13059
+},
+{
+"id": 4200,
+"slug": "portal-2",
+"name": "Portal 2",
+"added": 11429
+},
+{
+"id": 5286,
+"slug": "tomb-raider",
+"name": "Tomb Raider (2013)",
+"added": 10355
+},
+{
+"id": 5679,
+"slug": "the-elder-scrolls-v-skyrim",
+"name": "The Elder Scrolls V: Skyrim",
+"added": 10238
+},
+{
+"id": 12020,
+"slug": "left-4-dead-2",
+"name": "Left 4 Dead 2",
+"added": 9878
+},
+{
+"id": 802,
+"slug": "borderlands-2",
+"name": "Borderlands 2",
+"added": 9814
+}
+]
+},
+{
+"id": 1,
+"name": "Xbox One",
+"slug": "xbox-one",
+"games_count": 3875,
+"image_background": "https://media.rawg.io/media/games/511/5118aff5091cb3efec399c808f8c598f.jpg",
+"image": null,
+"year_start": null,
+"year_end": null,
+"games": [
+{
+"id": 3498,
+"slug": "grand-theft-auto-v",
+"name": "Grand Theft Auto V",
+"added": 13059
+},
+{
+"id": 4200,
+"slug": "portal-2",
+"name": "Portal 2",
+"added": 11429
+},
+{
+"id": 3328,
+"slug": "the-witcher-3-wild-hunt",
+"name": "The Witcher 3: Wild Hunt",
+"added": 11235
+},
+{
+"id": 5286,
+"slug": "tomb-raider",
+"name": "Tomb Raider (2013)",
+"added": 10355
+},
+{
+"id": 802,
+"slug": "borderlands-2",
+"name": "Borderlands 2",
+"added": 9814
+},
+{
+"id": 4062,
+"slug": "bioshock-infinite",
+"name": "BioShock Infinite",
+"added": 9744
+}
+]
+}
+]
+
 const BACKUP = {
     REVIEWS: JSON.parse(JSON.stringify(reviews)),
     ARTICLES: JSON.parse(JSON.stringify(articles)),
-    GAMES: JSON.parse(JSON.stringify(games))
+    GAMES: JSON.parse(JSON.stringify(games)),
+    PLATFORMS: JSON.parse(JSON.stringify(platforms))
 }
 
 export default BACKUP

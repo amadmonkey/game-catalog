@@ -4,16 +4,16 @@ import './LoadingRow.scss';
 
 const LoadingRow = () => {
     return (
-        <div className="other-articles">
-            <article className="other-articles-item-loading shimmer">
+        <div className="articles">
+            <article className="articles-item-loading shimmer">
             </article>
-            <article className="other-articles-item-loading shimmer">
+            <article className="articles-item-loading shimmer">
             </article>
-            <article className="other-articles-item-loading shimmer">
+            <article className="articles-item-loading shimmer">
             </article>
-            <article className="other-articles-item-loading shimmer">
+            <article className="articles-item-loading shimmer">
             </article>
-            <article className="other-articles-item-loading shimmer">
+            <article className="articles-item-loading shimmer">
             </article>
         </div>
     )

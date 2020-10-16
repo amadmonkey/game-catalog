@@ -1,0 +1,172 @@
+@import '../../../src/Variables.scss';
+
+.container {
+    position: relative;
+    a {
+        text-decoration: none;
+    }
+    .back-button {
+        min-width: auto;
+        width: 50px;
+    }
+    .container-title {
+        font-size: 25px;
+        color: #ccc;
+        margin: 15px 0;
+        margin-bottom: 25px;
+        display: inline-block;
+    }
+    .filters {
+        .search {
+            position: absolute;
+            right: 0;
+            line-height: 3.5;
+            form {
+                > div {
+                    position: relative;
+                    display: inline;
+                    &:before {
+                        content: url(../../img/search.svg);
+                        position: absolute;
+                        top: 70%;
+                        left: 25px;
+                        transform: translateY(-50%);
+                    }
+                }
+            }
+            input {
+                font-size: 16px;
+                height: 40px;
+                width: 85px;
+                padding: 1px 25px 1px 55px;
+                background-color: transparent;
+                border: 2px solid $text-dark;
+                border-radius: 25px;
+                font-family: 'Montserrat-Medium', sans-serif;
+                color: $text-light;
+                @include transition(0.2s);
+                &.active,
+                &:hover,
+                &:focus {
+                    width: 300px;
+                    border-radius: 30px;
+                    border-color: $primary;
+                    color: $primary;
+                }
+                &::placeholder {
+                    letter-spacing: 3px;
+                }
+            }
+            .clear-button {
+                position: absolute;
+                height: 45px;
+                width: 45px;
+                min-width: unset;
+                top: 5px;
+                right: 5px;
+                border: none;
+                box-shadow: none;
+                font-size: 21px;
+                opacity: 0;
+                &.active {
+                    opacity: 1;
+                }
+            }
+            .submit-button {
+                position: absolute;
+                height: 45px;
+                width: 45px;
+                min-width: unset;
+                top: 5px;
+                right: -55px;
+                text-align: center;
+                opacity: 0;
+                padding: 0;
+                &.active {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    .container-footer {
+        margin-top: 20px;
+        position: fixed;
+        bottom: 100px;
+        right: 100px;
+        text-align: center;
+        > * {
+            height: 70px;
+            width: 70px;
+            min-width: auto;
+            border-radius: 50%;
+            margin: 0 10px;
+            display: inline-block;
+            position: relative;
+            &:hover {
+                &:before, &:after {
+                    opacity: 1;
+                }
+            }
+            &:before {
+                position: absolute;
+                z-index: 2;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -40px;
+                width: 100px;
+                height: 30px;
+                background-color: #000;
+                opacity: 0;
+                border-radius: 5px;
+                padding: 7px;
+                box-sizing: border-box;
+            }
+            &:after {
+                content: '';
+                z-index: 1;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%) rotate(45deg);
+                top: -30px;
+                width: 20px;
+                height: 20px;background-color: #000;
+                opacity: 0;
+            }
+        }
+        .show-more {
+            &:before {
+                content: 'Show more';
+            }
+            &.loading {
+                color: $text-dark;
+                border: 2px solid $text-dark;
+                cursor: not-allowed;
+                pointer-events: none;
+                .loading-icon {
+                    animation: spin 3s linear infinite;
+                    border: 2px solid $text-dark;
+                    border-top-color: transparent;
+                    height: 20px;
+                    width: 20px;
+                    border-radius: 50%;
+                    background-color: transparent;
+                }
+            }
+        }
+        .back-to-top {
+            &:before {
+                content: 'Back to top';
+            }
+        }
+        @media (max-width: $xl) {
+            bottom: 20px;
+            right: 20px;
+        }
+        // @media (max-width: $md) {
+        //     padding-top: 200px;
+        // }
+        // @media (max-width: $sm) {
+        //     padding-top: 250px;
+        // }
+    }
+}

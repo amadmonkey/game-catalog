@@ -1,0 +1,259 @@
+@import '../../Variables.scss';
+
+.articles {
+    min-height: 500px;
+    width: 100%;
+    display: inline-block;
+    color: $text-lightest;
+    margin-right: 30px;
+    padding-right: 20px;
+    box-sizing: border-box;
+    .articles-item {
+        display: flex;
+        position: relative;
+        line-height: 1.5;
+        color: $text-lightest;
+        padding: 15px 0;
+        &:first-child {
+            .image {
+                max-width: 250px;
+                img {
+                    border-radius: 10px;
+                }
+            }
+        }
+        .image {
+            display: inline-block;
+            max-width: 200px;
+            width: 100%;
+            @media (max-width: $lg-articles) {
+                max-width: unset;
+                margin-bottom: 10px;
+            }
+            img {
+                width: 100%;
+                border-radius: 5px;
+                @include shadow(0 3px 6px #00000054);
+            }
+        }
+        .description {
+            display: inline-block;
+            box-sizing: border-box;
+            padding-left: 20px;
+            vertical-align: top;
+            .title {
+                color: $text-lightest;
+                font-size: 14px;
+                max-width: 650px;
+            }
+            h2 {
+                color: $primary;
+                font-size: 12px;
+            }
+            .summary {
+                color: $text-lightest;
+                font-size: 12px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                line-height: 1.5;
+                max-height: 50px;
+                margin: 10px 0;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+            }
+            .date {
+                display: table;
+                margin-top: 5px;
+                font-size: 11px;
+                line-height: 1;
+                > * {
+                    display: table-cell;
+                    vertical-align: middle;
+                }
+                .time {
+                    height: 10px;
+                    margin-right: 10px;
+                    fill: $text-light;
+                }
+            }
+        }
+        &:not(:last-child) {
+            border-bottom: 1px solid $text-light;
+        }
+    }
+    button {
+        margin-top: 20px;
+    }
+}
+
+.articles-modal {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    color: $text-lightest;
+    padding: 2%;
+    box-sizing: border-box;
+    backdrop-filter: blur(8px);
+    background-color: #000000d1;
+    opacity: 1;
+    z-index: 5;
+    @include transition(0.5 ease-in-out);
+    &.hidden {
+        opacity: 0;
+        z-index: -1;
+    }
+    .content {
+        height: 90%;
+        padding: 0 20px;
+        overflow-y: auto;
+        box-sizing: border-box;
+        .image {
+            max-height: 500px;
+            height: 100%;
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        .description {
+            line-height: 1.5;
+            .modal-body {
+                a {
+                    color: $primary;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+                > h3 {
+                    font-size: 21px;
+                    background-color: #676767ab;
+                    padding: 5px 10px;
+                    border-radius: 5px;
+                    margin-top: 40px;
+                    margin-bottom: 20px;
+                }
+                strong {
+                    font-weight: bold;
+                }
+                ul {
+                    padding: 0 2rem;
+                    li {
+                        span {
+                            cursor: none;
+                            pointer-events: none;
+                        }
+                        &.hide {
+                            display: none;
+                        }
+                        list-style-type: square !important;
+                    }
+                    &:nth-of-type(even) {
+                        li {
+                            list-style: circle;
+                        }
+                    }
+                }
+                p {
+                    margin: 20px 0;
+                }
+                div[data-embed-type="video"] {
+                    iframe {
+                        min-height: 612px;
+                    }
+                }
+                figure {
+                    width: 100% !important;
+                    a {
+                        width: auto;
+                        padding: 0 !important;
+                        img {
+                            width: 100%;
+                        }
+                    }
+                    figcaption {
+                        border-bottom: 1px solid gray;
+                        font-style: italic;
+                        color: gray;
+                        padding: 10px;
+                        text-align: center;
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+            header {
+                margin: 20px 0;
+                .title {
+                    font-size: 24px;
+                }
+                > h2 {
+                    font-size: 12px;
+                }
+                .date {
+                    display: table;
+                    font-size: 12px;
+                    > * {
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+                    .time {
+                        height: 15px;
+                        margin-right: 10px;
+                        fill: $text-light;
+                    }
+                }
+            }
+        }
+    }
+    button {
+        height: 70px;
+        width: 70px;
+        min-width: auto;
+        border-radius: 50%;
+        margin: 0;
+        margin-bottom: 10px;
+        display: inline-block;
+        position: relative;
+        &:hover {
+            &:before, &:after {
+                opacity: 1;
+            }
+        }
+        &:before {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            transform: translateX(-50%);
+            top: -40px;
+            width: 100px;
+            height: 30px;
+            background-color: #000;
+            opacity: 0;
+            border-radius: 5px;
+            padding: 7px;
+            box-sizing: border-box;
+        }
+        &:after {
+            content: '';
+            z-index: 1;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%) rotate(45deg);
+            top: -30px;
+            width: 20px;
+            height: 20px;background-color: #000;
+            opacity: 0;
+        }
+    }
+    footer {
+        font-size: 12px;
+        margin: 20px;
+        text-align: center;
+        .to-gamespot {
+            display: block;
+        }
+    }
+}

@@ -39,6 +39,7 @@
 }
 
 $primary: #a09703;
+$primary-light: #bfb72d;
 $secondary: #901a90;
 $bg: #011627;
 $bg-dark: #011525;
@@ -50,15 +51,16 @@ $text-dark: #5D5D5D;
 $text-light: #929292;
 $text-lighter: #D6D6D6;
 $text-lightest: #DFDFDF;
+$blue: #5d6190;
 
 $shadow: 0 3px 3px #00000052;
 
 $xl: 1600px;
 $lg: 1366px;
-$lg-other-articles: 1180px;
+$lg-articles: 1180px;
 $lg-grid: 1174px;
 $md: 720px;
-$md-other-articles: 980px;
+$md-articles: 980px;
 $md-grid: 779px;
 $sm: 480px;
 $xs: 320px;
@@ -111,3 +113,5 @@ $xs: 320px;
         background-position: 1200px 0;
     }
 }
+
+@keyframes spin { 100% { transform: rotate(360deg); } }

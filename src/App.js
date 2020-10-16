@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './reset.css';
 import './App.scss';
 
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
-import { BrowserRouter, Route } from 'react-router-dom';
+import NotFound from './utilities/404/404';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import _ROUTES from "./utilities/Routes";
 
 import { ReactComponent as Controller } from './img/bg-controller.svg';
@@ -17,14 +18,28 @@ import { ReactComponent as Dpad } from './img/bg-dpad.svg';
 
 
 const App = () => {
+
+	useEffect(()=> {
+		window.addEventListener('scroll', () => {
+			if(window.pageYOffset !== 0){
+				document.querySelector('.main-header').classList.add('active');
+			} else {
+				document.querySelector('.main-header').classList.remove('active');
+			}
+		})
+	}, [])
+
 	return (
 		<div className="app">
 			<BrowserRouter basename={process.env.PUBLIC_URL}>
 				<Header />
-				<div className="content">
-					{Object.keys(_ROUTES).map((key, i) => {
-						return <Route key={i} path={_ROUTES[key].path} component={_ROUTES[key].component} exact />
-					})}
+				<div id="CONTENT" className="content">
+					<Switch>
+						{Object.keys(_ROUTES).map((key, i) => {
+							return <Route key={i} path={_ROUTES[key].path} component={_ROUTES[key].component} exact={_ROUTES[key].exact} />
+						})}
+						<Route component={NotFound} />
+					</Switch>
 				</div>
 				<Footer />
 			</BrowserRouter>

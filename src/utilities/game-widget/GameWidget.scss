@@ -65,13 +65,22 @@
             position: absolute;
             bottom: 0;
             padding: 20px;
+            a {
+                text-decoration: none !important;
+            }
             h1 {
+                color: $text-lightest;
                 margin-bottom: 10px;
+                line-height: 1.5;
             }
             ul {
                 li {
                     display: inline-block;
                     margin-right: 10px;
+                    svg {
+                        height: 20px;
+                        fill: #fff;
+                    }
                 }
             }
         }
