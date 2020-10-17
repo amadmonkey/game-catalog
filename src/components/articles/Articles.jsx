@@ -33,7 +33,6 @@ const Articles = (props) => {
         let newParams = queryParams;
         newParams.page = newPage + 1;
         setQueryParams(newParams);
-        getArticles();
     }
 
     const search = (searchValue) => {
@@ -48,21 +47,6 @@ const Articles = (props) => {
         setQueryParams(newParams);
     }
 
-    const getArticles = () => {
-        debugger
-        setIsLoading(true);
-        API.GET.ARTICLES(queryParams).then(res => {
-            let results = props.isDashboard ? res.data.results : (articles ? [...articles, ...res.data.results] : res.data.results);
-            setArticles(res.isAxiosError ? BACKUP.ARTICLES : results);
-            if (props.isDashboard) {
-                props.setArticles(results.slice(0, 10));
-            }
-            props.location && updateModal(props.location.state.article);
-            setIsLoading(false);
-        }).catch((err) => {
-            setIsLoading(false);
-        });
-    }
 
     const updateModal = (article) => {
         document.getElementsByTagName("html")[0].style.overflowY = (article ? 'hidden' : 'auto');
@@ -84,12 +68,30 @@ const Articles = (props) => {
     }
 
     useEffect(() => {
+
+        const getArticles = () => {
+            setIsLoading(true);
+            API.GET.ARTICLES(queryParams).then(res => {
+                let results = props.isDashboard ? res.data.results : (articles ? [...articles, ...res.data.results] : res.data.results);
+                setArticles(res.isAxiosError ? BACKUP.ARTICLES : results);
+                if (props.isDashboard) {
+                    props.setArticles(results.slice(0, 10));
+                }
+                props.location && updateModal(props.location.state.article);
+                setIsLoading(false);
+            }).catch((err) => {
+                setIsLoading(false);
+            });
+        }
+
         getArticles();
+
         let container = document.querySelector('.articles-modal');
         container.addEventListener("click", modalClick);
         return function cleanUp() {
             container.removeEventListener("click", modalClick);
         }
+
     }, [queryParams])
 
     return (
@@ -148,7 +150,7 @@ const Articles = (props) => {
                     </div>
                 </div>
                 <footer>
-                    <span className="to-gamespot">Click <a target="_blank" rel="noopener noreferrer" href={selectedArticle && selectedArticle.site_detail_url}>here</a> to view original article</span>
+                    <span className="to-gamespot">Click <a target="_blank" rel="noopener" href={selectedArticle && selectedArticle.site_detail_url}>here</a> to view original article</span>
                 </footer>
             </div>
         </Container >

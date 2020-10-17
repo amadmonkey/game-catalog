@@ -26,41 +26,6 @@ const Game = (props) => {
     const [selectedVideo, setSelectedVideo] = useState(null);
     !props.match.params.id && history.push('/games');
 
-    const getGame = () => {
-        API.GET.GAME({ id: gameId }).then(res => {
-            setGame(res.data);
-        }).catch((err) => {
-        });
-    }
-
-    const getScreenshots = () => {
-        API.GET.GAME_SCREENSHOTS({ id: gameId }).then(res => {
-            setScreenshots(res.data.count ? res.data.results : null);
-        }).catch((err) => {
-        });
-    }
-
-    const getMovies = () => {
-        API.GET.GAME_MOVIES({ id: gameId }).then(res => {
-            setMovies(res.data.count ? res.data.results : null);
-        }).catch((err) => {
-        });
-    }
-
-    const getSimilarGames = () => {
-        API.GET.GAME_SIMILAR_GAMES({ id: gameId }).then(res => {
-            setSimilarGames(res.data.count ? res.data.results.slice(0, 6) : null);
-        }).catch((err) => {
-        });
-    }
-
-    const getYoutube = () => {
-        API.GET.GAME_DETAILS({ id: gameId, endpoint: "youtube" }).then(res => {
-            setYoutubeMovies(res.data.count ? res.data.results : null);
-        }).catch((err) => {
-        });
-    }
-
     const openVideoModal = (obj) => {
         document.getElementsByTagName("html")[0].style.overflowY = (obj ? 'hidden' : 'auto');
         document.getElementsByClassName("main-header")[0].style.zIndex = (obj ? 2 : 3);
@@ -70,6 +35,42 @@ const Game = (props) => {
     useEffect(() => {
         window.scrollTo(0, 0);
         setGame(null);
+
+        const getGame = () => {
+            API.GET.GAME({ id: gameId }).then(res => {
+                setGame(res.data);
+            }).catch((err) => {
+            });
+        }
+
+        const getScreenshots = () => {
+            API.GET.GAME_SCREENSHOTS({ id: gameId }).then(res => {
+                setScreenshots(res.data.count ? res.data.results : null);
+            }).catch((err) => {
+            });
+        }
+
+        const getMovies = () => {
+            API.GET.GAME_MOVIES({ id: gameId }).then(res => {
+                setMovies(res.data.count ? res.data.results : null);
+            }).catch((err) => {
+            });
+        }
+
+        const getSimilarGames = () => {
+            API.GET.GAME_SIMILAR_GAMES({ id: gameId }).then(res => {
+                setSimilarGames(res.data.count ? res.data.results.slice(0, 6) : null);
+            }).catch((err) => {
+            });
+        }
+
+        const getYoutube = () => {
+            API.GET.GAME_DETAILS({ id: gameId, endpoint: "youtube" }).then(res => {
+                setYoutubeMovies(res.data.count ? res.data.results : null);
+            }).catch((err) => {
+            });
+        }
+
         getGame();
         getScreenshots();
         getMovies();

@@ -36,8 +36,6 @@ const Carousel = (props) => {
             <article key={i} className={"carousel-item " + (i === 0 ? 'active' : '')}>
                 <img loading="lazy" src={obj.image.original} alt="" />
                 <div className="description">
-                    {/* <Link to={`/articles/${obj.title.toLowerCase().replaceAll(/ /g, '-')}/${obj.id}`}><h1 className="title">{obj.title}</h1></Link> */}
-                    {/* <a target="_blank" rel="noopener noreferrer" href={obj.site_detail_url}><h1 className="title">{obj.title}</h1></a> */}
                     <Link to={{
                         pathname: `/articles/${obj.title.toLowerCase().replaceAll(/ /g, '-')}`,
                         state: { article: obj }
@@ -79,10 +77,12 @@ const Carousel = (props) => {
                             return CarouselItem(value, i)
                         })}
                         <footer className="indicator">
-                            <li className="active"></li>
-                            {props.articles.map((value, i) => {
-                                return <li key={i} onClick={(e) => HandleClick(i)}></li>
-                            })}
+                            <ul>
+                                <li className="active"></li>
+                                {props.articles.map((value, i) => {
+                                    return <li key={i} onClick={(e) => HandleClick(i)}></li>
+                                })}
+                            </ul>
                         </footer>
                     </React.Fragment>
                 }

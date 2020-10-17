@@ -16,6 +16,7 @@ import './Reviews.scss';
 
 const Reviews = (props) => {
     let pageSize = 9;
+
     const [isLoading, setIsLoading] = useState(true);
     const [reviews, setReviews] = useState(null);
     const [queryParams, setQueryParams] = useState({
@@ -29,7 +30,6 @@ const Reviews = (props) => {
         let newParams = queryParams;
         newParams.page = newPage + 1;
         setQueryParams(newParams);
-        getReviews();
     }
 
     const search = (searchValue) => {
@@ -44,19 +44,32 @@ const Reviews = (props) => {
         setQueryParams(newParams);
     }
 
-    const getReviews = () => {
-        setIsLoading(true);
-        API.GET.REVIEWS(queryParams).then(res => {
-            let results = props.isDashboard ? res.data.results : (reviews ? [...reviews, ...res.data.results] : res.data.results);
-            setReviews(res.isAxiosError ? BACKUP.REVIEWS : results);
-            setIsLoading(false);
-        }).catch(() => {
-            setIsLoading(false);
-        })
-    }
+    // const getReviews = () => {
+    //     setIsLoading(true);
+    //     API.GET.REVIEWS(queryParams).then(res => {
+    //         let results = props.isDashboard ? res.data.results : (reviews ? [...reviews, ...res.data.results] : res.data.results);
+    //         setReviews(res.isAxiosError ? BACKUP.REVIEWS : results);
+    //         setIsLoading(false);
+    //     }).catch(() => {
+    //         setIsLoading(false);
+    //     })
+    // }
 
     useEffect(() => {
+
+        const getReviews = () => {
+            setIsLoading(true);
+            API.GET.REVIEWS(queryParams).then(res => {
+                let results = props.isDashboard ? res.data.results : (reviews ? [...reviews, ...res.data.results] : res.data.results);
+                setReviews(res.isAxiosError ? BACKUP.REVIEWS : results);
+                setIsLoading(false);
+            }).catch(() => {
+                setIsLoading(false);
+            })
+        }
+
         getReviews();
+
     }, [queryParams])
 
     return (

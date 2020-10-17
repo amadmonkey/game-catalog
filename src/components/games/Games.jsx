@@ -63,6 +63,24 @@ const Games = (props) => {
     }
 
     useEffect(() => {
+        const getGames = () => {
+            setIsLoading(true);
+            if (props.isDashboard) {
+                API.GET.GAMES_MAIN(queryParams).then(res => {
+                    setGames(res.isAxiosError ? BACKUP.GAMES.slice(0, 9) : (games ? [...games, ...res.data.results] : res.data.results));
+                    setIsLoading(false);
+                }).catch((err) => {
+                    setIsLoading(false);
+                });
+            } else {
+                API.GET.GAMES(queryParams).then(res => {
+                    setGames(res.isAxiosError ? BACKUP.GAMES.slice(0, 9) : (games ? [...games, ...res.data.results] : res.data.results));
+                    setIsLoading(false);
+                }).catch((err) => {
+                    setIsLoading(false);
+                });
+            }
+        }
         getGames();
     }, [queryParams])
 

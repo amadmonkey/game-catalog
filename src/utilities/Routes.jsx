@@ -32,7 +32,7 @@ const ROUTES = {
     }),
     game: new Route({
         label: "Game",
-        path: "/games/:id",
+        path: "/games/:title/:id",
         component: Game,
         exact: true,
         isShown: true,
