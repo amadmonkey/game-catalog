@@ -76,6 +76,7 @@ const Game = (props) => {
         getMovies();
         getYoutube();
         getSimilarGames();
+
     }, [gameId])
 
     return (

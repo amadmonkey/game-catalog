@@ -14,14 +14,20 @@ const Header = (props) => {
 
         API.GET.PLATFORMS().then(res => {
             setPlatforms(res.data.results.splice(0, 10));
+        }).catch((err) => {
+
         })
 
         API.GET.GENRES().then(res => {
             setGenres(res.data.results);
+        }).catch((err) => {
+
         })
 
         API.GET.PUBLISHERS().then(res => {
             setPublishers(res.data.results);
+        }).catch((err) => {
+
         })
 
     }, [])

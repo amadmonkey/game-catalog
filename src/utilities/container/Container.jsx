@@ -29,7 +29,7 @@ const Container = (props) => {
                             <form id="_SEARCH-FORM" className={isFormActive || searchValue ? 'active' : ''} onSubmit={(e) => handleFormSubmit(e)}>
                                 <div>
                                     <label hidden>Search</label>
-                                    <input type="text" id="_SEARCH" className={isFormActive || searchValue ? 'active' : ''} placeholder="Search" value={searchValue} onFocus={(e) => setIsFormActive(true)} onBlur={(e) => setIsFormActive(false)} onChange={(e) => setSearchValue(e.target.value)} />
+                                    <input type="text" id="_SEARCH" maxLength="50" className={isFormActive || searchValue ? 'active' : ''} placeholder="Search" value={searchValue} onFocus={(e) => setIsFormActive(true)} onBlur={(e) => setIsFormActive(false)} onChange={(e) => setSearchValue(e.target.value)} />
                                 </div>
                                 <button className={`clear-button ${searchValue ? 'active' : ''}`} type="button" onClick={() => setSearchValue('')}>&times;</button>
                                 <button className={`submit-button ${isFormActive ? 'active' : ''}`} type="submit">&gt;</button>

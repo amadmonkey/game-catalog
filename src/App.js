@@ -5,7 +5,7 @@ import './App.scss';
 import Header from './components/header/Header';
 import Footer from './components/footer/Footer';
 import NotFound from './utilities/404/404';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Switch } from 'react-router-dom';
 import _ROUTES from "./utilities/Routes";
 
 import { ReactComponent as Controller } from './img/bg-controller.svg';
@@ -31,7 +31,7 @@ const App = () => {
 
 	return (
 		<div className="app">
-			<BrowserRouter basename={process.env.PUBLIC_URL}>
+			<HashRouter basename={process.env.PUBLIC_URL}>
 				<Header />
 				<div id="CONTENT" className="content">
 					<Switch>
@@ -42,7 +42,7 @@ const App = () => {
 					</Switch>
 				</div>
 				<Footer />
-			</BrowserRouter>
+			</HashRouter>
 			<Controller className="bg-item bg-controller-1" />
 			<Triangle className="bg-item bg-triangle-1" />
 			<Square className="bg-item bg-square" />

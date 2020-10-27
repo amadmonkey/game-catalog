@@ -10,6 +10,7 @@ const YoutubeContainer = (props) => {
                     height="700px"
                     src={`https://www.youtube.com/embed/${props.id}`}
                     frameborder="0"
+                    loading="lazy"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"></iframe>
             }
         </React.Fragment>

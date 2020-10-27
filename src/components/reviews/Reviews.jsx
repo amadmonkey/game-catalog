@@ -26,10 +26,7 @@ const Reviews = (props) => {
     });
 
     const getMoreReviews = () => {
-        let newPage = queryParams.page;
-        let newParams = queryParams;
-        newParams.page = newPage + 1;
-        setQueryParams(newParams);
+        setQueryParams({ ...queryParams, page: queryParams.page + 1 });
     }
 
     const search = (searchValue) => {
@@ -44,32 +41,15 @@ const Reviews = (props) => {
         setQueryParams(newParams);
     }
 
-    // const getReviews = () => {
-    //     setIsLoading(true);
-    //     API.GET.REVIEWS(queryParams).then(res => {
-    //         let results = props.isDashboard ? res.data.results : (reviews ? [...reviews, ...res.data.results] : res.data.results);
-    //         setReviews(res.isAxiosError ? BACKUP.REVIEWS : results);
-    //         setIsLoading(false);
-    //     }).catch(() => {
-    //         setIsLoading(false);
-    //     })
-    // }
-
     useEffect(() => {
-
-        const getReviews = () => {
-            setIsLoading(true);
-            API.GET.REVIEWS(queryParams).then(res => {
-                let results = props.isDashboard ? res.data.results : (reviews ? [...reviews, ...res.data.results] : res.data.results);
-                setReviews(res.isAxiosError ? BACKUP.REVIEWS : results);
-                setIsLoading(false);
-            }).catch(() => {
-                setIsLoading(false);
-            })
-        }
-
-        getReviews();
-
+        setIsLoading(true);
+        API.GET.REVIEWS(queryParams).then(res => {
+            let results = props.isDashboard ? res.data.results : (reviews ? [...reviews, ...res.data.results] : res.data.results);
+            setReviews(res.isAxiosError ? BACKUP.REVIEWS : results);
+            setIsLoading(false);
+        }).catch(() => {
+            setIsLoading(false);
+        })
     }, [queryParams])
 
     return (

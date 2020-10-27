@@ -23,11 +23,7 @@ const Games = (props) => {
     });
 
     const getMoreGames = () => {
-        let newPage = queryParams.page;
-        let newParams = queryParams;
-        newParams.page = newPage + 1;
-        setQueryParams(newParams);
-        getGames();
+        setQueryParams({ ...queryParams, page: queryParams.page + 1 });
     }
 
     const search = (searchValue) => {
@@ -43,7 +39,7 @@ const Games = (props) => {
         setQueryParams(newParams);
     }
 
-    const getGames = () => {
+    useEffect(() => {
         setIsLoading(true);
         if (props.isDashboard) {
             API.GET.GAMES_MAIN(queryParams).then(res => {
@@ -60,28 +56,6 @@ const Games = (props) => {
                 setIsLoading(false);
             });
         }
-    }
-
-    useEffect(() => {
-        const getGames = () => {
-            setIsLoading(true);
-            if (props.isDashboard) {
-                API.GET.GAMES_MAIN(queryParams).then(res => {
-                    setGames(res.isAxiosError ? BACKUP.GAMES.slice(0, 9) : (games ? [...games, ...res.data.results] : res.data.results));
-                    setIsLoading(false);
-                }).catch((err) => {
-                    setIsLoading(false);
-                });
-            } else {
-                API.GET.GAMES(queryParams).then(res => {
-                    setGames(res.isAxiosError ? BACKUP.GAMES.slice(0, 9) : (games ? [...games, ...res.data.results] : res.data.results));
-                    setIsLoading(false);
-                }).catch((err) => {
-                    setIsLoading(false);
-                });
-            }
-        }
-        getGames();
     }, [queryParams])
 
     return (

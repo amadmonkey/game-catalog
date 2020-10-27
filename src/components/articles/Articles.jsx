@@ -29,10 +29,7 @@ const Articles = (props) => {
     });
 
     const getMoreArticles = () => {
-        let newPage = queryParams.page;
-        let newParams = queryParams;
-        newParams.page = newPage + 1;
-        setQueryParams(newParams);
+        setQueryParams({ ...queryParams, page: queryParams.page + 1 });
     }
 
     const search = (searchValue) => {
@@ -54,45 +51,40 @@ const Articles = (props) => {
         setSelectedArticle(article);
     }
 
-    const modalClick = (e) => {
-        let path = e.path[0];
-        if (path.className.search('articles-modal') >= 0) {
-            updateModal(null);
-        } else if (path.className.search('pinbox__hide-link') >= 0) {
-            let nodes = document.getElementsByClassName('hide');
-            for (var x = 0; x < nodes.length; x++) {
-                nodes.item(x).classList.remove('hide');
+    useEffect(() => {
+        setIsLoading(true);
+        API.GET.ARTICLES(queryParams).then(res => {
+            setIsLoading(false);
+            let results = props.isDashboard ? res.data.results : (articles ? [...articles, ...res.data.results] : res.data.results);
+            setArticles(res.isAxiosError ? BACKUP.ARTICLES : results);
+            if (props.isDashboard) {
+                props.setArticles(results.slice(0, 10));
             }
-            path.classList.add('hide');
-        }
-    }
+            props.location && updateModal(props.location.state.article);
+        }).catch((err) => {
+            setIsLoading(false);
+        });
+    }, [queryParams, props])
 
     useEffect(() => {
-
-        const getArticles = () => {
-            setIsLoading(true);
-            API.GET.ARTICLES(queryParams).then(res => {
-                let results = props.isDashboard ? res.data.results : (articles ? [...articles, ...res.data.results] : res.data.results);
-                setArticles(res.isAxiosError ? BACKUP.ARTICLES : results);
-                if (props.isDashboard) {
-                    props.setArticles(results.slice(0, 10));
-                }
-                props.location && updateModal(props.location.state.article);
-                setIsLoading(false);
-            }).catch((err) => {
-                setIsLoading(false);
-            });
-        }
-
-        getArticles();
-
         let container = document.querySelector('.articles-modal');
+        let modalClick = (e) => {
+            let path = e.path[0];
+            if (path.className.search('articles-modal') >= 0) {
+                updateModal(null);
+            } else if (path.className.search('pinbox__hide-link') >= 0) {
+                let nodes = document.getElementsByClassName('hide');
+                for (var x = 0; x < nodes.length; x++) {
+                    nodes.item(x).classList.remove('hide');
+                }
+                path.classList.add('hide');
+            }
+        }
         container.addEventListener("click", modalClick);
         return function cleanUp() {
             container.removeEventListener("click", modalClick);
         }
-
-    }, [queryParams])
+    }, [])
 
     return (
         <Container isDashboard={props.isDashboard} isLoading={isLoading} title="Latest Articles" handleShowMore={getMoreArticles} handleSearch={search} showFilters={true}>
@@ -150,7 +142,7 @@ const Articles = (props) => {
                     </div>
                 </div>
                 <footer>
-                    <span className="to-gamespot">Click <a target="_blank" rel="noopener" href={selectedArticle && selectedArticle.site_detail_url}>here</a> to view original article</span>
+                    <span className="to-gamespot">Click <a target="_blank" rel="norefferer noopener" href={selectedArticle && selectedArticle.site_detail_url}>here</a> to view original article</span>
                 </footer>
             </div>
         </Container >

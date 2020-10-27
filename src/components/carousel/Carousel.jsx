@@ -9,7 +9,6 @@ Moment.globalTimezone = 'America/Los_Angeles';
 
 const Carousel = (props) => {
 
-
     const pauseLength = 10; // in seconds
     let activeIndex = 1;
     let timeoutId = null;
@@ -57,15 +56,17 @@ const Carousel = (props) => {
 
     useEffect(() => {
         let container = document.querySelector('.carousel-container');
-        setTimer();
-        container.addEventListener('mouseenter', clearTimeout(timeoutId));
-        container.addEventListener('mouseleave', setTimer);
+        if (props.articles) {
+            setTimer();
+            container.addEventListener('mouseenter', clearTimeout(timeoutId));
+            container.addEventListener('mouseleave', setTimer);
+        }
         return function cleanup() {
             container.removeEventListener('mouseenter', clearTimeout(timeoutId));
             container.removeEventListener('mouseleave', setTimer);
             clearTimeout(timeoutId);
         }
-    })
+    }, [])
 
 
     return (
